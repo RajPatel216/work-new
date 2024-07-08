@@ -1,0 +1,97 @@
+*{
+    margin:0px;
+    padding:0px;
+}
+.main{
+    background-image:url(laptop.jpg);
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size:100VW 100vh;
+    height:100vh;
+    width:100vw;
+    background-color:rgba(0, 0, 0, 0.205);
+}
+li{
+    list-style:none;
+}
+ul{
+    display:flex;
+    justify-content:right;
+    margin-right:6%;
+}
+ul li:first-child{
+    position: absolute;
+    left:20px;
+    transform: scaleX(-1);
+}
+li a{
+    text-decoration: none;
+    color:black;
+    margin-left:20px;
+    font-size:29px;
+    font-weight: 700;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+}
+li a:hover{
+    text-decoration:underline;
+}
+nav{
+    height:40px;
+    box-sizing:border-box;
+    padding-top:7px;
+}
+.home{ 
+    width:601px;
+    height:290px;
+    color:white;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content: center;
+    position:absolute;
+    top:200px;
+    left:100px;
+    font-size:20px;
+    text-align:center;
+}
+
+
+/* product area */
+.products{
+    width:100vw;
+    height:60vh;
+    box-sizing:border-box;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+}
+.pro{
+    text-align:center;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin-top:2%;
+}
+.item{
+    width:18vw;
+    height:40vh;
+    margin:12px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content: center;
+}
+
+.btn{
+    font-size:20px;
+    width:30%;
+    height:29px;
+    border:1px solid black;
+    border-radius:2px;
+}
+.btn:hover{
+    background: rgba(151, 153, 151, 0.603);
+}
+
+.products a{
+    width:240px;
+}

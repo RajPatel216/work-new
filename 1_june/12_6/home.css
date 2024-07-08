@@ -1,0 +1,123 @@
+*{ 
+    padding:0px;
+    margin:0px;
+}
+nav{
+    position:sticky;
+    top:0;
+}
+
+#navbar{
+    display:flex;
+    background-color:#80defa;
+    align-items: center;
+    height:40px;
+}
+
+.ele{
+    margin-left:12px;
+    font-family: "Ubuntu", sans-serif;
+    font-weight:700;
+    font-style:italic;
+    list-style:none;
+}
+
+.ele a{
+    text-decoration: none;
+    color:#53599A; 
+}
+
+.ele:hover{
+    text-decoration: underline;
+}
+
+
+.sect{
+    background-color: #aeecef;
+    font-family: "Ubuntu", sans-serif;
+    height:80vh;
+    color:#53599A;
+    font-weight:700;
+    font-size:1.3em;
+    /* display: flex;
+    align-items: center; */
+    padding:10px;
+    }
+
+#home{
+      color: #aeecef;
+      background-image:url(saputara.jpg);
+      justify-content: center;
+      padding-top:0px;
+      display: flex;
+      /* align-items: center; */
+      padding:10px;
+    
+}
+
+#about{
+    color: #068d9d;
+    background-color:#80defa;
+    flex-direction:column;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    padding-bottom:100px;
+   }
+
+section p{
+    margin:100px;
+}
+
+#table{
+    color: #aeecef;
+    background-color:#53599A;
+    font-size:1em;
+    height:90vh;
+    display:flex;
+    align-items:center;
+    flex-direction: column; 
+}
+table{
+    margin:50px;
+}
+
+td{
+    text-align:center;
+    width:65px;
+    height:20px;
+}
+img{
+    width:90px;
+    height:100px;
+}
+
+.im{
+    width:120px;
+    height:150px;
+    margin:20px;
+}
+
+.imgg{
+    margin-top:150px;
+}
+
+#image1{
+    color: #068d9d;
+    background-color:#80defa;
+    height:100vh;
+    display:flex;
+    align-items:center;
+    flex-direction: column;
+}
+
+
+
+#contect{
+    color: #aeecef;
+    background-color:#53599A;
+    /* border:2px solid red; */
+    justify-content: center;
+    display: flex;
+    /* align-items:center; */
+}

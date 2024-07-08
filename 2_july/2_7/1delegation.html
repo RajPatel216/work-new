@@ -1,0 +1,29 @@
+<!DOCTYPE html>                                   <!-- wrong code -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body class="clone">
+    <div>
+        <button>btnnn 1</button><br /><br /><br /><br /><br /><br /><br />
+        <button>btnnn 2</button><br />
+        <button>btnnn 1</button><br />
+        <button>btnnn 14</button>
+        </div>
+
+    <script>
+        const div = document.getElementsByTagName("div")[0];
+
+        div.addEventListener("copy", (event) => {
+            if (event.target.tagName === "BUTTON") {
+                console.log("button was clicked in");
+            }
+        });
+    </script>
+</body>
+
+</html>

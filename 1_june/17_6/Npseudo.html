@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        #lol p:nth-child(4){
+            background-color: red;
+        }
+ 
+        #lol p{                            /*  class ni andar na specific tag ne target karva */
+            border:1px solid gray;
+        }
+   
+        span.game{                          /* same class but different tag */
+            font-size:50px;
+        }       
+
+       .pin,.video{
+        background-color: violet;
+       }
+
+       india,ba,code,span,span .game{
+        color:blue;
+       }
+
+
+    </style>
+</head>
+<body>
+    <main id="lol">
+        <p class="game">hello   game</p>
+        <span class="game">world game</span>
+        <p class="game">laptop game</p>
+        <p>computer</p>
+        <p class="video">engineering  class video</p>
+        <p class="pin">software              pin</p>
+        <span>lol span</span><br><br>       
+        <code>new tag code</code> <br><br>
+        <ba>random tag</ba><br><br>
+        <india>this is india tag</india>
+    </main>
+    </p>
+    <p class="game">building        game</p>
+    <p class="video">knowledge       video</p>
+
+</body>
+</html>

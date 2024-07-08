@@ -1,0 +1,102 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: 8FD3F7;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+/*winner notice*/
+
+/*Title part*/
+h1 {
+    margin: 50px 0px 1px 0px;
+    font-family: "Bungee Spice", sans-serif;
+}
+
+/*Main boxes part*/
+.container {
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.game {
+    height: 60vmin;
+    width: 60vmin;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5vmin;
+    flex-wrap: wrap;
+}
+
+.box {
+    height: 18vmin;
+    width: 18vmin;
+    background-color: 15A3EF;
+    border: none;
+    border-radius: 10px;
+    background-image: url(blue\ talk\ comic.jpg);
+    background-position: 0% 0%;
+    /* leftright  updown*/
+    font-size: 50px;
+    color: 826D42;
+    font-weight: 600;
+
+}
+
+/*reset btn area*/
+.reset-btn {
+    width: 9vw;
+    height: 6.4vmin;
+    color: white;
+    background-color: #15A3EF;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 900;
+    font-size: 3vmin;
+    border-radius: 8px;
+    border: none;
+}
+
+#new-btn {
+    width: 13vw;
+    height: 6.6vmin;
+    color: white;
+    background-color: 15A3EF;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 900;
+    font-size: 3vmin;
+    border-radius: 8px;
+    border: none;
+}
+
+#new-btn:hover {
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+}
+
+.msgContainer {
+    height: 100vmin;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+#msg {
+    color: #16160f;
+    font-size: 5vmin;
+}
+
+.hide {
+    display: none;
+}

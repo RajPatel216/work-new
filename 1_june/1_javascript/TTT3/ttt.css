@@ -1,0 +1,98 @@
+*{
+    margin:0px;
+    padding:0px;
+}
+
+body{
+    background-color:#d2cff8;
+    text-align:center;
+}
+
+.head{
+    height:10vh;
+    padding:10px; 
+    display:inline-block;
+    margin-top:30px;
+}
+h1{ 
+    display:inline;
+    margin:0px 6px;
+}
+h1:hover{
+    font-size:2.4em;
+    color:rgb(255, 253, 253);
+    text-shadow: 0 0 1rem rgba(0,0,0,0.5);
+}
+.container{
+    margin-top:-20px;
+    height:70vh;
+    display:flex;
+    align-items:center;             /* top-down this center kare ele*/
+    justify-content:center;
+}
+
+.game{
+    height:60vh;
+    width:60vh;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:1.5vmin;
+    
+}
+
+.box{
+    height:18vh;
+    width:18vh;
+    box-shadow:0 0 1rem rgba(0,0,0,0.3);
+    font-size:8vh;
+    color:red;
+    border:none;
+    background-color: aliceblue;
+}
+
+#reset-btn{
+    font-size:3.5vmin;
+    padding:5px 20px;
+    margin:5px auto;
+    border-radius:4px;
+    border:none;
+    text-align:center;
+    background-color: white;
+    color:#000000;}
+
+#reset-btn:hover{
+    background-color: rgb(0, 0, 0);
+    color:rgb(255, 255, 255);
+}
+#new-btn{
+    padding:5px 20px;
+    font-size:3.5vmin;
+    background-color: white;
+    color:black;
+    /* border-radius: 1rem; */
+    border:none;
+}
+#new-btn:hover{
+    background-color: rgb(0, 0, 0);
+    color:rgb(255, 255, 255);
+}
+
+#msg{
+    color:#16160f;
+    font-size:5vmin;
+}
+
+.msg-container{
+    height:100vmin;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap:4rem;
+}
+
+.hide{
+    display:none;
+}

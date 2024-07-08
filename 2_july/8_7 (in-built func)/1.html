@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button class="hide">hideeeee</button>
+    <button class="show">showwwwwwwww </button>
+    <button class="toggle">toggleeeeeeee</button>
+    <br><br>
+
+    <div style="background-color: rgb(226, 172, 90); width:200px; height:200px"></div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        
+        $('document').ready(function(){
+           $('.hide').click(function(){
+            $('div').hide();
+           })
+
+           $('.show').click(function(){
+            $('div').show();
+           })
+
+           $('.toggle').click(function(){
+            $('div').toggle(1000);
+           })
+        })
+    
+    </script>
+</body>
+</html>

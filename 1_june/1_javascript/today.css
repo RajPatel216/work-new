@@ -1,0 +1,21 @@
+
+.light{
+    background-color: black;
+    color:white;
+}
+.dark{
+    background-color: white;
+    color:black;
+}
+
+/* div{
+    width:100px;
+    height:100px;
+    border:1px solid black;
+    color:blue;
+    background-color: aquamarine;
+
+    display:flex;
+    justify-content: center;
+    align-items:center;
+} */

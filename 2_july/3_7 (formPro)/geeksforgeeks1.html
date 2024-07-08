@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" 
+          content="width=device-width, initial-scale=1.0">
+    <style>
+        h1 {
+            color: green;
+        }
+
+        #container {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        #container button {
+            margin: 2px;
+            padding: 5px 10px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        #container button:hover {
+            background-color: #2980b9;
+        }
+
+        .new-div {
+            margin-top: 10px;
+            padding: 10px;
+            margin-left: 43%;
+            width: 100px;
+            background-color: green;
+            border-radius: 5px;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="container">
+        <h1>GeeksForGeeks</h1>
+        <button onclick="addDiv()">
+          Add Div
+          </button>
+        <button onclick="removeDiv()">
+          Remove Div
+          </button>
+    </div>
+
+    <script>
+        function addDiv() {
+            let container = 
+                    document.getElementById('container');
+
+            // Create a new div
+            let newDiv = 
+                    document.createElement('div');
+            newDiv.className = 'new-div';
+            newDiv.textContent = 'New Div Tag';
+
+            // Add the new div to the container
+            container.appendChild(newDiv);
+        }
+
+        function removeDiv() {
+            let container = 
+                    document.getElementById('container');
+
+            // Remove the last added div
+            let divs = container.querySelectorAll('.new-div');
+            if (divs.length > 0) {
+                let lastDiv = divs[divs.length - 1];
+                container.removeChild(lastDiv);
+            }
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,177 @@
+/* font-family: "Exo", sans-serif; */
+*{padding:0px; margin:0px;}
+
+.text{color:rgb(0, 0, 0);
+font-family:'Times New Roman', Times, serif;
+}
+
+
+/* navigation bar */
+.navbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:50px;
+}
+nav div a{
+    color:rgb(0, 0, 0);
+    font-size:20px;
+    text-decoration: none;
+    margin-left:15px;   
+    font-family:'Times New Roman', Times, serif;
+    width:100px;
+    font-weight:600;
+}
+nav div a:hover{
+    text-decoration: underline;
+    font-size:21px;
+}
+
+
+/* all section  */
+.section{
+    width:100%;
+    height:60vh;
+}
+
+
+/* Personal information */
+#PI input{
+   position:absolute;   
+   top:11em;
+   left:800px;
+}
+#PI p{
+    position:absolute;
+    top:37%;
+    left:22%;
+    font-size:30px;
+}
+#PI span{
+    position:absolute;
+    top:46%;
+    left:20%;
+}
+    
+    .bio{
+        position:absolute;
+        top:50%;
+        left:7%;
+        width:500px;
+        height:100px;
+    }
+    
+    .bio p{
+        font-size:15px !important;
+    }
+
+
+/* skills */
+#skills{
+    height:30vh;
+}
+
+#skills ul{
+    margin-top:30px;
+    position:absolute;
+    left:21%;
+}
+
+
+/* education */
+#education{
+    /* border:1px solid blue; */
+    /* margin-top:3px;
+    margin-bottom:3px; */
+    height:40vh;
+}
+#education div{
+        margin-left:20%;
+        margin-top:30px;
+    }
+
+
+/* project section */
+.pro{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box{
+    height:270px;
+    width:230px;
+    margin:20px;
+    border:1px solid black;
+    border-radius:15px;
+}
+
+.box p{
+    margin:30px;
+    color:gray;
+}
+
+.iim{
+    margin:25px; 
+}
+
+/* contact */
+#contacts{
+    /* border:1px solid brown; */
+    margin-top:40px;
+    margin-bottom:3px;
+}
+#contacts div{
+    height:200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction:column;
+}
+
+/* registration */
+#Registration{
+    /* border:1px solid black; */
+    margin-top:3px;
+    margin-bottom:3px;
+}
+
+.form{
+    height:300px;
+}
+
+/* footer */
+footer{
+    background-color: black;
+    font-family: "Zen Dots", sans-serif;
+    text-align:center;
+    color:white;
+    height:20px;
+}
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+/* skills section */
+/* .block{
+    height:15px;
+    border:1px solid black;
+    width:400px;
+    background-color: black;
+    width:400px;
+}
+
+.ski{
+    margin-top:0px;
+    margin-left:20%;
+} */

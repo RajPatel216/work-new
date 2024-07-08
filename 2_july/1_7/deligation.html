@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+            
+            height:80px;
+            width:200px;
+            border:1px solid black;
+        }
+    </style>
+</head>
+<body>
+    
+  <div class="container">
+    <button>button1</button>
+    <button>button2</button>
+    <button>button</button>
+    <button>button4</button>
+  </div>
+
+    <script>
+ const buttons = document.querySelectorAll('button')
+
+buttons.forEach(button => {
+buttons.addEventListener("click", (event) => {
+  if(event.target.tagName === 'BUTTON') {
+    console.log("button was clicked")
+  }
+})
+})
+
+
+// buttons.forEach(button => {
+//   button.addEventListener("click", (event) => {
+//     console.log(event.target.innerText)
+//   })
+// })
+
+    </script>
+</body>
+</html>
+<!-- 
+if(event.target.tagName === 'BUTTON') {
+    console.log(event.target.innerText)
+  }
+}) -->
+

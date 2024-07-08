@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form_practice</title>
+    <style>
+        table{
+           position:relative;
+           left:12px;
+           width:98vw;
+           border-radius:10px;
+           border-collapse:collapse;
+        }
+        
+        table tr{
+            height:48px;
+        }
+        table tr:first-child{
+            font-weight: 900;
+            background-color: red;
+        }
+        
+        table td{
+            height:40px;
+          text-align:center;
+          width:22vw;
+        }
+        .tr{
+            border:1px solid black;
+        }
+        .td{
+            border:1px solid black;
+
+        }
+        input{
+            width:18vw;
+            height:40px;
+            margin-left:10px;
+            border-radius:3px;
+        }
+        .inputname{
+            width:18vw;
+            height:40px;
+            margin-left:10px;
+            border-radius:3px;
+            
+        }
+        .ground{
+            
+            background-color: green;
+        }
+    </style>
+</head>
+
+<body>
+   
+    <table border="1" id="tabl">
+        <tr>
+            <td>S R. N O</td>
+            <td>N a m e</td>
+            <td>E m a i l</td>
+            <td>A c t i o n</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td class="inputname"><input type="text" name="name" id="name" placeholder="Please Enter Name"></td>
+            <td><input type="text" name="email" id="email" placeholder="Please Enter Email"></td>
+            <td><img src="add.png" alt="add element" width="42" height="42" onclick="add()"></td>
+        </tr>
+    </table>
+
+    <script>
+        function add(){
+
+            let tabl = document.querySelector('#tabl');
+            
+            let row = document.createElement('tr');
+            tabl.appendChild(row)
+                  
+            for(let i=0;i<4;i++){
+                 let column  = document.createElement('td');
+                 column.style.width="22vw";
+                 column.style.border='1px solid black';
+                 row.appendChild(column);
+                }
+                
+                var numbers = [0,1,2,3,4,5,6,7,8,9,10];
+                var col1 = document.querySelectorAll('td:nth-child(1)');
+                for(var i = 1; i < col1.length+1; i++) {
+                    col1[i].innerText=numbers[i];
+                }
+                
+                var col2 = document.querySelectorAll('td:nth-child(2)');
+                for(var i = 1; i < col2.length+1; i++) {
+                    let input = document.createElement('input');
+                    input.type = ('text');
+                    input.className = ('ground');
+                    input.placeholder = ('Please Enter Name:');
+                    col2[i].appendChild(input);
+                }
+                
+
+}
+
+</script>
+</body>
+</html>

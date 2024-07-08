@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery cdn link</title>
+    <style>
+        button{
+            width:200px;
+            height:40px;
+            color:white;
+            background-color: black;
+        }
+
+    </style>
+</head>
+<body>
+    <button onclick="fadein()">click here</button>
+    <img id="img1" src="add.png" alt="add image for fade in out">
+
+     
+</body>
+    <script>
+        function fadein(){
+            $('#img1').fadeToggle(2000);
+        }
+        </script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+</html>

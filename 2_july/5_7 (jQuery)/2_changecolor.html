@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width:400px;
+            height: 400px;
+            background-color: cadetblue;
+        }
+    </style>
+</head>
+<body>
+     <div>
+        
+     </div>
+     <br>
+     <button onclick="lol()">change to red</button>
+   
+   <script>
+         let blue=true;
+         
+         let btn = document.querySelector('button');
+         let div = document.querySelector('div');
+        
+         function lol(){
+           if(blue==true){
+             $("div").css('background-color','red');
+             btn.innerText='change to cadetblue';
+             blue=false;
+            }
+            else{
+            $("div").css('background-color','cadetblue');
+             btn.innerText='change to red';
+               blue=true;
+
+            }       
+          }
+// upar vado code simply if else thi thai jay....
+// but jyare ane if and bija koi function(('here red()') ni help thi karva jai to run nathi thato
+// because jyare code lol() function ma jay tyre both condition sachi 6e first 'if' vadi and second 'red()' function vadi both condition sachi 6e
+// and ak funtion ma 2 sacha code hoy to temathi last function vada atle k 2nd code ne j run kare 6e  /*
+//to ana solution ma 2nd red() function ne me if vadi condition api 6e je same upar na code ma else na jevu work kare 6e !
+        
+      // function red(){
+      //       if(blue==false){
+      //       $("div").css('background-color','cadetblue');
+      //        btn.innerText='change to red';
+      //          blue=true;
+      //       }
+      //     }
+            
+        </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    
+</body>
+</html>
+<!-- 
+//  function lol(){
+//     if(blue){
+//         div.style.backgroundColor='red';
+//         btn.innerText='change to cadetblue';
+//         blue=false;
+//     }
+//     else{
+//         $('div').css('background-color','cadetblue');
+//         btn.innerText='change to red';
+//         blue=true;
+//     }} -->

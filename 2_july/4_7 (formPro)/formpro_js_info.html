@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>proj practice table next day</title>
+    <style>
+        .table{
+            text-align:center;
+            border-collapse:collapse;
+        }
+        table tr{
+            height:40px;
+        }
+ 
+    </style>
+</head>
+
+<body>
+    <button onclick="row()">create rows bros</button>
+   
+    <table class="table" border="2" width="90%">
+        <tr>
+            <td>S R. N O</td>
+            <td>N a m e</td>
+            <td>E m a i l</td>
+            <td>A c t i o n</td>
+        </tr>
+    </table>
+    
+    <script>
+    function row(){
+
+      let table = document.querySelector('.table');
+      
+      
+      let row = document.createElement('tr');
+      row.style.border = '1px solid black';
+      row.style.width = '90vw';
+      row.style.height = '4vh';
+      table.appendChild(row);
+      
+      let color=['red','green','yellow','blue'];
+      
+      for(let i=0;i<4;i++){
+          let column = document.createElement('td');
+          // column.style.backgroundColor=color[i];
+          row.appendChild(column);
+        }
+
+        let numbers = [0,1,2,3,4,5,6,7,8,9,10];
+        var cells = document.querySelectorAll('td:nth-child(1)');
+        for(var i = 1 ; i < cells.length+1 ; i++) {
+            cells[i].classList.add('firstcells');
+            cells[i].innerText=numbers[i];
+        }
+    
+}          
+
+        // var cells = document.querySelectorAll('td:nth-child(1)');
+        //  for(var i = 0 ; i < cells.length ; i++) {
+           //      cells[i].classList.add('firstcells');
+           //     }                                        
+//********* this code is running, / but it give all column same class, / problem is i dont want to give first row same class, 
+//*********/ just few minutes before i randomly start for loop at 1 / <-- this is my solution,
+//********* / in sort if you want to skip first row then start for loop at index 1  
+        
+
+    //   var cells = document.querySelectorAll('td:nth-child(1)');
+    //   for(var i = 0 ; i < cells.length ; i++) {
+    //       if(cells[i].textContent.trim() > '') {
+    //           cells[i].classList.add('firstcells');     
+    //     }
+//******* this part is same as above still not work reason ? (stackoverflow code)
+
+
+    //   let firstcells = document.querySelectorAll('td:nth-child(1)');
+    //   firstcells.style.backgroundcolor = 'red';
+    //   row.appendChild('firstcells');                 
+//******* this is also same as above, still not working  (my code)
+    
+
+    </script> 
+</body>
+</html>

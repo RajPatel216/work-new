@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice</title>
+ 
+</head>
+<body>
+ 
+     <div class="contaiener">
+        <button class="clo" onclick="but()">
+            press to print number
+        </button>
+
+        <div class="num">
+ 
+        </div>
+     </div>
+
+
+    <script>
+
+        let a;
+        
+      function but(){
+        let num = document.querySelector('.num');
+
+
+        for(a=1;a<11;a++){
+        num.innerText += a;
+        
+        }
+      }
+
+    </script> 
+</body>
+</html>

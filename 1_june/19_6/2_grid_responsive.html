@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        main{
+            display:grid;
+           grid-template-areas:
+           'head head head head'
+           'art art di di' 
+           'foot foot foot foot';  
+        }
+
+        .cla{ 
+            border:1px solid black;
+            margin:10px;
+
+        }
+        
+        header{
+            grid-area:head;
+            text-align:center;
+        }
+        article{
+            grid-area:art;
+            padding:10px;
+        }
+        div{
+            grid-area:di;
+            padding:10px;
+        }
+        footer{
+            grid-area:foot;
+            text-align:center;
+        }
+ 
+        @media only screen and (max-width:700px){
+           main{
+           display:grid;
+           grid-template-areas:
+           'head head head head'
+           'art art art art'
+           'di di di di' 
+           'foot foot foot foot';  
+        }
+        }
+
+    </style>
+</head>
+<body>
+      <main>
+       <header class="cla">
+        hello world
+       </header>
+
+       <article class="cla">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum fugit facilis expedita maxime vitae necessitatibus quibusdam obcaecati ea perspiciatis? Voluptate quasi dicta architecto, fuga, aperiam, blanditiis ut unde aspernatur nostrum vero ex dignissimos. Laudantium ipsam ipsum iusto, laborum ducimus alias blanditiis rerum sed culpa dicta dolor pariatur deleniti, distinctio quaerat, corporis id exercitationem rem assumenda corrupti. Pariatur id eaque nemo!
+       </article>
+
+       <div class="cla">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto ipsam amet quibusdam saepe, est beatae voluptatem minus, accusamus ratione fugit ullam adipisci, ab facere. Laborum nobis aliquam eum dolore sint.
+       </div>
+
+        <footer class="cla">
+            © copyright , all right reserved !!
+        </footer>
+    </main>
+    
+</body>
+</html>

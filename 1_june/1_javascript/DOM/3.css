@@ -1,0 +1,28 @@
+#boom{
+    /* size:50px; */
+    font-size:15px;
+    border:2px solid #b6fa72;
+    border-radius:2px;
+    padding:3px;
+    margin:3px;
+    width:66px;
+    height:60px;
+}
+*{
+    background-color: beige;
+}
+
+.pe{
+    height:100px;
+    width:100px;
+    padding:3px;
+    background-color:rgb(70, 46, 4);
+    border:2px solid black;
+    border-radius:2px;
+}
+
+.de{
+    color:rgb(69, 184, 242);
+    /* background-color: slategray; */
+    /* border:2px solid grey; */
+}

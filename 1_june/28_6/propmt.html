@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="myfu()">bbbdddfggsgg</button>
+    <p id="gom"></p>
+    
+    <script>
+         function myfu(){
+
+            let text;
+            let person=prompt("write your name","sachin tendulkar");
+            if(person==null||person==""){
+                text="plz write name ";
+            }
+            else{
+                text="your name is "+person +" :)";
+            }
+            document.querySelector("#gom").innerHTML=text;
+
+         }
+
+    </script>
+</body>
+</html>

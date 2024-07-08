@@ -1,0 +1,37 @@
+*{
+    padding:0px;
+    margin:0px;
+}
+.main{
+    background-image: url(town.jpg);
+    background-repeat:no-repeat;
+    background-size: 100%;
+    height:100vh;
+}
+nav{
+    height:40px;
+    padding:9px;
+    box-sizing:border-box;
+}
+.navbarr{
+    display:flex;
+    width:100%;
+    background-color: transparent;
+}
+
+.navbarr li{
+    list-style:none;
+    text-decoration: none;
+     margin-left:10px;
+}
+.navbarr li a{
+    text-decoration: none;
+    color:black;   
+}
+.navbarr li a:hover{
+    text-decoration: underline;
+}
+.right{
+    position: absolute;
+    right:20px;
+}

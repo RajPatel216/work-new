@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Registration form</title>
+    <style>
+        *{
+            padding:0px;
+            margin:0px;
+        }
+        .container{
+            background: url(plane.jpg);
+            width:100vw;
+            height:100vh;
+            display: flex;
+            justify-content: center;
+            align-items:center;
+            background-color: rgba(255, 255, 255, 0.487);
+        } 
+        th,td{
+            padding:3px;    
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+    <center>
+        <form>
+        <table border="2" border-spacing:5px;>
+         <tr><td>Name</td>
+        <td colspan="2" ><input type="text" name="name" placeholder="Enter your name" ></td></tr>
+        <tr><td>Email</td>
+       <td colspan="2"><input type="email" name="email" placeholder="Enter your email"></td></tr>
+        <tr><td>Phone no.</td>
+        <td colspan="2"><input type="tel" name="phone" placeholder="Enter your phone number" size="20"></td></tr>
+        <tr><td>Gender</td><td colspan="2">Please select gender</td>
+        <tr>
+        <td>Male</td>
+        <td colspan="2"><input type="radio" name="gender" value="male"></td></tr>
+        <td>Female</td> 
+        <td colspan="2"><input type="radio" name="gender" value="female"></td></tr>
+        
+            <tr><td>Hobby</td><td colspan="2">Please select below hobbies</td>
+            <tr>
+            <td>Drawing</td>
+            <td colspan="2"><input type="checkbox" name="hobby" value="drawing"></td></tr>
+            <td>Sports</td> 
+            <td colspan="2"><input type="checkbox" name="hobby" value="sports"></td></tr>
+            <td>Trekking</td> 
+            <td colspan="2"><input type="checkbox" name="hobby" value="trekking"></td></tr>
+           
+
+        
+        <tr><td><button>Submit</button></td>
+        <td><a href="login.html">Login</a></td></tr>
+    </table>
+        </form>
+    </center>
+</div>
+</body>
+</html>

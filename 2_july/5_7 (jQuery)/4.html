@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width:400px;
+            height: 1600px;
+            background-color:lawngreen;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="lol()">change to red</button>
+    <br>
+     <div>
+        
+     </div>
+      
+      <script>
+
+        let btn = document.querySelector('button');
+        let div = document.querySelector('div');
+
+       function lol(){
+           goal();
+            div.style.backgroundColor='red';
+
+       }
+
+       function goal(){
+        for(let x=1;x<20000;x++){
+          console.log(x);
+        }
+       }
+      </script>
+    </body>

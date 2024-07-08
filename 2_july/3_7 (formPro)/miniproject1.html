@@ -1,0 +1,83 @@
+<head>
+    <style>
+        body{
+        background-color: black;
+        color:white;
+        display: flex;
+        align-items:center;
+        justify-content: center;
+
+        }
+        .container{
+          border:1px solid white;
+          width:60%;
+          height:90%;
+          text-align:center;
+        }
+        .btn{
+        width:200px;
+        height:40px; 
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana;   
+        font-size:22px;      
+        }
+        .new-div{
+            text-align:center;
+            padding-top:9px;
+            border:1px solid black;
+            margin:20px;
+            background-color: gray;
+            color:black;
+            width:200px;
+            height:60px; 
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana;   
+            font-size:22px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+     
+      <h2>Add and Remove Using Javascript</h2>
+      
+      <button class="btn" onclick="adddiv()">
+        Add element
+      </button>
+      <button class="btn" onclick="removediv()">
+        Remove element
+      </button>
+      <button class="textchange btn" onclick="textchange()">Text Change</button>
+    
+    </div>
+    
+    <script>
+        
+        function adddiv(){
+            let container = document.querySelector('.container');
+            let newdiv= document.createElement('input');
+            newdiv.className = "new-div";
+            newdiv.textContent = "This is new div";
+            
+            container.appendChild(newdiv);
+        };
+        
+        function removediv(){
+            let container = document.querySelector('.container');
+            
+            let divs=container.querySelectorAll('.new-div');
+            if(divs.length > 0){
+                let lastdiv = divs[divs.length - 1];
+                container.removeChild(lastdiv);
+            }
+        }
+        
+        function textchange(){
+            let container=document.querySelector('.container');
+            let ele = container.querySelectorAll('.new-div');
+            
+            for(let x of ele){
+                x.innerText = "text has been changed !";
+            }
+            
+        }
+    </script>
+</body>

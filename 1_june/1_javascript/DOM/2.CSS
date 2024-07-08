@@ -1,0 +1,12 @@
+#boomj{
+    border:3px solid black;
+    border-radius:3px;
+    height:100px;
+    width:75px;
+    background-color: antiquewhite;
+    padding:10px;
+    margin:3px;
+}
+*{
+    background-color: aqua;
+}

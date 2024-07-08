@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img class="clo" src="add.png" alt="" width="200" height="200">
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $('img').hover(fun1,fun2)
+        function fun1(){
+            $('img').css('width','200px');
+            $('img').css('height','200px');
+        }
+        function fun2(){
+            $('img').css('width','100px');
+            $('img').css('height','100px');
+        }
+    </script>
+</body>
+</html>

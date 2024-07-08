@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main</title>
+    <style>
+        table{
+           position:relative;
+           left:12px;
+           width:98vw;
+           border-radius:10px;
+           border-collapse:collapse;
+        }
+        
+        table tr{
+            height:48px;
+        }
+        table tr:first-child{
+            font-weight: 900;
+            background-color: red;
+        }
+        
+        table td{
+            height:40px;
+            text-align:center;
+            width:22vw;
+        }
+        .tr{
+            border:1px solid black;
+        }
+        .td{
+            border:1px solid black;
+        }
+        .input{
+            width:18vw;
+            height:40px;
+            margin-left:10px;
+            border-radius:3px;
+        }
+    
+        .croma{
+            
+            background-color: green;
+        }
+    </style>
+</head>
+
+<body>
+   
+    <table border="1" id="tabl">
+        <tr>
+            <td>S R. N O</td>
+            <td>N a m e</td>
+            <td>E m a i l</td>
+            <td>A c t i o n</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td></td>
+            <td><input type="text" name="email" id="email" placeholder="Please Enter Email"></td>
+            <td><img src="add.png" alt="add element" width="42" height="42" onclick="add()"></td>
+        </tr>
+    </table>
+
+    <script>
+        function add(){
+
+            let tabl = document.querySelector('#tabl');
+            
+            let row = document.createElement('tr');
+            tabl.appendChild(row)
+                  
+            for(let i=0;i<4;i++){
+                 let column  = document.createElement('td');
+                 column.style.width="22vw";
+                 column.style.border='1px solid black';
+                 row.appendChild(column);
+                }
+                 
+                var col1 = document.querySelectorAll('td:nth-child(1)');
+                var col2 = document.querySelectorAll('td:nth-child(2)');
+                
+                 var numbers = [0,1,2,3,4,5,6,7,8,9,10];
+                 for(var i = 1; i < col1.length+1; i++) {
+                     col1[i].innerText=numbers[i];
+                    
+                     let input =document.createElement('input')
+                     input.type=('text');
+                     input.placeholder=('Enter text');
+                     input.className=('input');
+                     col2[i].appendChild(input);
+
+                    }
+
+// for(var j = 1; j < co2.length+1; j++){
+//     co2[j].className=('croma');
+//    }
+//******* nth child 1 and 2 select to thata hata pan for loop koi ak no chalto hato (uppar vado for loop j chale)
+}
+
+
+</script>
+</body>
+</html>

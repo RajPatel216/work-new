@@ -1,0 +1,79 @@
+*{
+    margin:0px;
+    padding:0px;
+}
+
+body{
+    background-color: cadetblue;
+    text-align: center;
+}
+#msg{
+    color:bisque;
+    font-size:8vmin;
+    /* margin-bottom:8px; */
+}
+.msg-container{
+ height:100vmin;
+ display:flex;
+ justify-content:center;
+ align-items:center;
+flex-direction:column;
+gap:3vmin;
+
+}
+
+.hide{
+    display:none;
+}
+
+#new-btn{
+    padding:0.40rem;
+    font-size:1.00rem;
+    background-color:white;
+    color:black;
+    border-radius:0.3rem;
+    border:none;
+
+}
+.container{
+    height:70vh;
+    display:flex;
+    /* flex-wrap:wrap; */
+    justify-content:center;           /* left right thi center kare   +   
+                          aa property use karva "display:flex" use karvu pade*/    
+    align-items:center;            /* up down thi center kare*/
+    /* border:2px solid black; */
+}
+
+.game{
+    /* border: 2px solid white; */
+    height:60vmin;
+    width:60vmin;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    align-items:center; 
+     gap:1.5vmin;
+    
+}
+
+.box{
+    height:18vmin;
+    width:18vmin;
+    border-radius:.4rem;
+    border:none;
+    /* box-shadow:0 0 1rem rgba(0,0,0.09); */
+    font-size:8vmin;
+    color:brown;
+    background-color: aquamarine;
+}
+
+#reset-btn{
+    /* width:100px; */
+    padding:0.40rem;
+    font-size:1.00rem;
+    background-color:white;
+    color:black;
+    border-radius:0.3rem;
+    border:none;
+}

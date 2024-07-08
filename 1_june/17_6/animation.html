@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        .main{
+         
+            height:30px;
+            width:30px;
+            border:3px solid gray;
+            border-top:2px solid blue;
+            border-bottom:2px solid red;
+            border-left:2px solid green;
+            border-right:2px solid orange;
+            border-radius:50%;
+            animation: loop 1s linear infinite;
+            
+        }
+
+        @keyframes loop{
+            0%{
+               transform:rotate(0deg);
+            }
+            100%{
+                transform:rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="main"></div>
+</body>
+</html>

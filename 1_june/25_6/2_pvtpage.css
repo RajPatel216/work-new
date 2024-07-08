@@ -1,0 +1,169 @@
+*{
+    margin:0px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+nav{
+    /* bordework2/24_6_2nd/hp.htmlr:1px solid black; */
+    box-sizing:border-box;
+    height:10vh;
+    display:flex;
+    align-items:center;
+    position:sticky;
+}
+
+img{
+    width:100px;
+    height:80px;
+}
+
+ul{ 
+    
+    position:absolute;
+    right:2.5%;
+    display:flex;
+    list-style:none;
+    /* border:1px solid black; */
+}
+
+nav li a{
+    text-decoration: none;
+    margin:14px;
+    color: rgb(75, 1, 44);
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size:20px;
+}
+nav li a:hover{
+     text-decoration: underline;
+}
+
+/* home division */
+.head{
+    background-image: url(town.jpg);
+    background-position:center;
+    background-repeat:no-repeat;
+    background-size:100vw 100vh;
+    height:100vh;
+    width:100vw;
+ 
+}
+
+.home{
+  
+    width:100vw;
+    height:90vh;
+    margin-top:15vh;
+    color:white;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    flex-direction:column;
+}
+
+
+/* product section */
+.products{
+    height:60vh;
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(350px,1fr));
+    padding:80px;
+    width:auto;
+}
+#product h2{
+    text-align:center;
+    margin:40px;
+}
+.items{
+    width:18vw;
+    height:40vh;
+    border:1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius:10px;
+     gap:20px;
+     flex-direction: column;
+     box-shadow:10px 10px 20px rgb(87, 2, 51);
+     margin-top:20px;
+}
+
+.items img{
+    width:160px;
+    height:120px;
+    margin-top:6%;
+}
+
+button{
+    width:120px;
+    height:40px;
+    border-radius:2px;
+    background-color: rgb(82, 2, 48);
+    font-size:26px;
+    color:white;
+}
+button:hover{
+    /* color:black; */
+    background-color: rgb(5, 5, 5);
+}
+
+.items a{
+    color:white;
+    text-decoration:none;
+}
+@media only screen and (max-width:1200px){
+
+    *{
+        font-size:14px;
+    }
+    
+    .items{
+        width:29vw;
+        height:50vh;
+
+    }
+    nav li a{
+        text-decoration: none;
+        margin:10px;
+        color: rgb(75, 1, 44);
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+     
+    }
+
+    nav{
+        display:flex;
+        justify-content: center;
+        flex-direction: column;
+        height:18vh;
+    }
+    ul{
+        position:static;
+        list-style:none;
+        width:290px;
+    }
+  
+
+    button{
+        font-size:20px;
+    }
+    /* .products{
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        
+    } */
+     
+img{
+    width:60px;
+    height:50px;
+}
+
+}
+
+@media only screen and (max-width:839px){
+    .products{
+        padding-left:30%;
+    }
+    .items{
+        width:45vw;
+        height:60vh;
+    }
+   
+}

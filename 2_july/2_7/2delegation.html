@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>events in js</title>
+    <style>
+        .body{
+             padding:400px;
+
+        }
+        button{
+            margin:20px;
+            width:200px;
+            height:40px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+        <button class="one">btnnn 1</button><br />
+        <button class="two">Text Change</button><br />
+        <button class="three">btn color change</button><br />
+        <button class="four">background change</button>
+        </div>
+   
+   <script>
+        let btn = document.querySelectorAll('div')
+        let one = document.querySelector('.one')
+        let sec =document.querySelector('.two')
+        let thi =document.querySelector('.three')
+        let fou =document.querySelector('.four')
+        let bod =document.querySelector('body')
+             
+            one.addEventListener('mouseover',(cla)=>{
+                if(event.target.className==='one'){
+                    one.style.width='400px';
+                }
+            })
+             
+             sec.addEventListener("mouseout",(eve)=>{
+                if(event.target.className==='two'){
+                    sec.innerText='Jai Hind';
+                }
+             })
+        
+            
+            thi.addEventListener('click',() =>{
+                    thi.style.backgroundColor="red";
+                
+            })
+     
+            fou.addEventListener("click",(event) =>{
+                if(event.target.className === 'four'){
+                    bod.style.backgroundColor="green";
+                }
+            })
+        
+            btn.forEach(div=>{
+                div.addEventListener('click',()=>{
+                    console.log('india won')
+                })
+            })
+    </script>
+</body>
+</html>
