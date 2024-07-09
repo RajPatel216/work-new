@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html>
+ 
+<head>
+    <title>
+        delegate() Method in jQuery
+    </title>
+ 
+    <script src=
+"https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+    </script>
+ 
+    <!-- jQuery script to add events -->
+    <script>
+        $(document).ready(function () {
+            // $("div").delegate("h3", "click", function () {
+            //     $("h3").css("background-color", "green");
+            // });
+            $('h3').click(function(){
+                $('h3').css('background-color','red')
+            })
+        });
+    </script>
+</head>
+ 
+<body>
+    <center>
+        <h1>Welcome to GeeksforGeeks!</h1>
+ 
+        <p>
+            Click on the below element (lightgreen
+            background) to change background-color
+        </p>
+ 
+        <div style="background-color:lightgreen;">
+            <h3>GeeksForGeeks</h3>
+        </div>
+ 
+        <h3>GeeksForGeeks.</h3>
+    </center>
+</body>
+ 
+</html>

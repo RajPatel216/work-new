@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+ 
+<head>
+    <title>
+        delegate() Method in jQuery
+    </title>
+ 
+    <script src=
+"https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+    </script>
+ 
+    <!-- jQuery script for delegate() method -->
+    <script>
+        $(document).ready(function () {
+            $("div").delegate("h3", "click", function () {
+                $(this).slideToggle();
+            });
+ 
+            $("button").click(function () {
+                $("<h3>This show how the delegate Method works.</h3>").insertAfter("button");
+            });
+        });
+    </script>
+</head>
+ 
+<body>
+    <center>
+        <h1>Welcome to GeeksforGeeks!.</h1>
+ 
+        <div style="background-color:green">
+ 
+            <h3>GeeksforGeeks.</h3>
+            <h3>The delegate Method.</h3>
+ 
+            <button>Click</button>
+        </div>
+    </center>
+</body>
+ 
+</html>

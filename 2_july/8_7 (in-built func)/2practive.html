@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .lol{background-color:red;
+            width:200px;
+            height:200px;
+            border:10px solid black;
+        };
+
+    </style>
+</head>
+<body>
+    <div class="lol"></div>
+    <!-- <br>
+    <p>this is the paragraph</p> -->
+    <br>
+    <br>
+    <br>
+    <!-- <br> -->
+    <button>On click</button>
+    <button class="on1">clickkk</button>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+         /* $('div').addClass('lol'); */
+         /* //  $('div').removeClass('lol'); */
+         /* $('div').before('fasfas sfs  vasd s dfsdfsd sssdhf sk hskj ashfashf asdjf hkashaskah kcjienejifn fnwi fn '); */
+         /* $('p').remove(); */
+
+         $("button").click(function(){
+         $("div").slideToggle();
+        });
+        
+        $(".on1").click(function(){
+         $("div").slideDown();
+        });
+         
+    </script>
+</body>
+</html>
