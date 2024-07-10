@@ -1,0 +1,66 @@
+<!-- Practical Task:
+Build an image gallery where users can click on thumbnail images to view them in a larger size with a lightbox effect
+Key Features:
+Display a grid of thumbnail images.
+When a thumbnail image is clicked, open a modal/lightbox overlay to display the larger version of the image.
+Allow users to navigate between images using previous and next buttons in the lightbox.
+Provide the option to close the lightbox by clicking outside the image or on a close button.
+Technologies Used:
+HTML: Structure the image gallery layout.
+CSS: Style the gallery and create the lightbox overlay.
+jQuery: Implement interactive features such as opening/closing the lightbox and image navigation. -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lightbox</title>
+    <link rel="stylesheet" href="1_pro.css">
+    <style>
+
+  #lightbox{
+    position: fixed;
+    z-index: 100;
+    top:0;
+    width:100%;
+    height:100%;
+    background-color: rgba(0,0,0,.8);
+    display:none;
+  }     
+  #lightbox:active{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+  }
+    </style>
+</head>
+<body>
+    <div class="grid">
+        <img src="1.jpg">
+        <img src="2.jpg">
+        <img src="3.jpg">
+        <img src="4.jpg">
+        <img src="5.jpg">
+        <img src="6.jpg">
+        <img src="7.jpg">
+        <img src="8.jpg">
+        <img src="9.jpg">
+    </div>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+       const lightbox = document.createElement('div')
+       lightbox.id='lightbox';
+       document.body.appendChild(lightbox);
+
+       const images = document.querySelectorAll('img')
+       images.forEach(image =>{
+        image.addEventListener('click',e=>{
+            lightbox.classList.add('active')
+        })
+       })
+    </script>
+</body>
+</html>
