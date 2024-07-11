@@ -1,0 +1,131 @@
+<!-- Practical Task:
+Build an image gallery where users can click on thumbnail images to view them in a larger size with a lightbox effect
+Key Features:
+Display a grid of thumbnail images.
+When a thumbnail image is clicked, open a modal/lightbox overlay to display the larger version of the image.
+Allow users to navigate between images using previous and next buttons in the lightbox.
+Provide the option to close the lightbox by clicking outside the image or on a close button.
+Technologies Used:
+HTML: Structure the image gallery layout.
+CSS: Style the gallery and create the lightbox overlay.
+jQuery: Implement interactive features such as opening/closing the lightbox and image navigation. -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lightbox</title>
+   <style>
+    *{
+    margin:0px;
+    padding:0px;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(3,270px);
+    justify-content: center;
+    align-items:center;
+    grid-gap:10px;
+    height:100vh;
+    width:100vw;
+}
+
+.box{
+    width:270px;
+    height:220px;
+    filter:grayscale(100%);
+    transition:.4s
+}
+.box:hover{
+  filter:none;
+  scale:1.1em;
+  transform:scale(1.029);
+}
+
+ .cancle{
+    width:29px;
+    height:29px;
+    position:fixed;
+    top:75px;
+    left:1330px;
+  } 
+
+#lightbox{
+  opacity:5;
+    position: fixed;
+    z-index: 100;
+    top:0;
+    width:100%;
+    height:100%;
+    background-color: rgba(0,0,0,.8);
+    display:none;
+}     
+  #lightbox.activate{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#lightbox img{
+    width:70vw;
+    height:70vh;
+}
+
+   </style>
+</head>
+
+<body>
+    <div class="grid">
+        <img class="box" src="1.jpg">
+        <img class="box" src="2.jpg">
+        <img class="box" src="3.jpg">
+        <img class="box" src="4.jpg">
+        <img class="box" src="5.jpg">
+        <img class="box" src="6.jpg">
+        <img class="box" src="7.jpg">
+        <img class="box" src="8.jpg">
+        <img class="box" src="9.jpg">
+    
+    </div>
+  
+    <img class="cancle" src="cancle.png" alt="">
+    
+    <script>
+       const lightbox=document.createElement('div');
+       lightbox.id='lightbox';
+       document.body.appendChild(lightbox);
+       const images = document.querySelectorAll('.box')
+       let cancle = document.querySelector('.cancle')
+       let piece = true;
+       images.forEach(image =>{
+        image.addEventListener('click',()=>{
+            lightbox.classList.add('activate');
+            let img = document.createElement('img');
+            img.src=image.src;
+
+            while(lightbox.firstChild){
+              lightbox.removeChild(lightbox.firstChild)
+            }
+
+            lightbox.appendChild(img);
+            piece=false;
+          })
+        })
+        lightbox.addEventListener('click',()=>{
+          lightbox.classList.add('activate');
+          if(piece==false){
+            
+          }
+          
+        })
+         lightbox.addEventListener('click',e =>{
+            if(e.target !== e.currentTarget)
+            return
+            lightbox.classList.remove('activate');
+          })
+    </script>
+</body>
+</html>
