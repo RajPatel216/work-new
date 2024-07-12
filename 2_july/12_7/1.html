@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lightbox</title>
+   <style>
+    *{
+    margin:0px;
+    padding:0px;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(3,270px);
+    /* border:2px solid red; */
+    justify-content: center;
+    align-items:center;
+    grid-gap:10px;
+    height:100vh;
+    width:100vw;
+}
+
+.box{
+  /* border:2px solid black; */
+    width:270px;
+    height:220px;
+    filter:grayscale(100%);
+    transition:.4s
+}
+.box:hover{
+  filter:none;
+  scale:1.1em;
+  transform:scale(1.029);
+}
+
+.cancle{
+    width:29px;
+    height:29px;
+    position:fixed;
+    top:75px;
+    left:1330px;
+  } 
+
+#lightbox{
+    position: fixed;
+    z-index: 100;
+    top:0;
+    width:100%;
+    height:100%;
+    background-color: rgba(0,0,0,.8);
+    display:none;
+} 
+
+#lightbox.activate{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#lightbox img{
+    width:70vw;
+    height:70vh;
+}
+
+   </style>
+</head>
+
+<body>
+    <div class="grid">
+        <img class="box" src="1.jpg">
+        <img class="box" src="2.jpg">
+        <img class="box" src="3.jpg">
+        <img class="box" src="4.jpg">
+        <img class="box" src="5.jpg">
+        <img class="box" src="6.jpg">
+        <img class="box" src="7.jpg">
+        <img class="box" src="8.jpg">
+        <img class="box" src="9.jpg">
+    </div>
+    <img class="cancle" src="cancle.png" alt="">
+
+
+    <script>
+      let lightbox = document.createElement('div');
+      lightbox.id ='lightbox';
+      body.appendChild(lightbox);
+    </script>
+
+
+
+</body>
+</html>

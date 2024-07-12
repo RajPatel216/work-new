@@ -8,16 +8,60 @@
     grid-template-columns: repeat(3,270px);
     justify-content: center;
     align-items:center;
-    grid-gap:15px;
-    height:100vh;
+    grid-gap:11px;
+    height:95vh;
     width:100vw;
 }
 
 img{
     width:270px;
     height:220px;
+    filter:grayscale(80%);
+}
+img:hover{
+    filter:grayscale(0%);
+
 }
 
+.cancle{
+    z-index:101;
+    width:29px;
+    height:29px;
+    position:fixed;
+    top:71px;
+    left:1325px;
+    display:none;
+    filter:grayscale(0%)
+}
+.cancle.activate{
+    display:flex;
+}
+.left{
+    z-index:101;
+    width:29px;
+    height:29px;
+    position:fixed;
+    top:350px;
+    left:250px;
+    display:none;
+    filter:grayscale(0%);  
+}
+.left.activate{
+    display:flex;
+}
+.right{
+    z-index:101;
+    width:29px;
+    height:29px;
+    position:fixed;
+    top:350px;
+    left:1325px;
+    display:none;
+    filter:grayscale(0%);  
+}
+.right.activate{
+    display:flex;
+}
 #lightbox{
     position: fixed;
     z-index: 100;
@@ -34,6 +78,7 @@ img{
 }
 
 #lightbox img{
-    width:80vw;
-    height:80vh;
+    width:70vw;
+    height:70vh;
+    filter:grayscale(0%);
 }

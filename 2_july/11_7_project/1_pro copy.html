@@ -26,6 +26,7 @@ jQuery: Implement interactive features such as opening/closing the lightbox and 
 .grid{
     display: grid;
     grid-template-columns: repeat(3,270px);
+    /* border:2px solid red; */
     justify-content: center;
     align-items:center;
     grid-gap:10px;
@@ -34,6 +35,7 @@ jQuery: Implement interactive features such as opening/closing the lightbox and 
 }
 
 .box{
+  /* border:2px solid black; */
     width:270px;
     height:220px;
     filter:grayscale(100%);
@@ -46,15 +48,23 @@ jQuery: Implement interactive features such as opening/closing the lightbox and 
 }
 
  .cancle{
+    z-index:101;
     width:29px;
     height:29px;
     position:fixed;
     top:75px;
     left:1330px;
+    display:none;
   } 
-
+  .cancle.activate{
+  /* z-index:101; */
+  display:flex;
+  /* position:fixed; */
+  /* top:75px;
+  left:1330px; */
+}
 #lightbox{
-  opacity:5;
+    
     position: fixed;
     z-index: 100;
     top:0;
@@ -90,18 +100,21 @@ jQuery: Implement interactive features such as opening/closing the lightbox and 
         <img class="box" src="9.jpg">
     
     </div>
-  
+
     <img class="cancle" src="cancle.png" alt="">
     
     <script>
        const lightbox=document.createElement('div');
        lightbox.id='lightbox';
        document.body.appendChild(lightbox);
-       const images = document.querySelectorAll('.box')
-       let cancle = document.querySelector('.cancle')
+
+       const images = document.querySelectorAll('.box');
+       let cancle = document.querySelector('.cancle');
        let piece = true;
+
        images.forEach(image =>{
         image.addEventListener('click',()=>{
+            cancle.classList.add('activate');
             lightbox.classList.add('activate');
             let img = document.createElement('img');
             img.src=image.src;
@@ -114,17 +127,13 @@ jQuery: Implement interactive features such as opening/closing the lightbox and 
             piece=false;
           })
         })
-        lightbox.addEventListener('click',()=>{
-          lightbox.classList.add('activate');
-          if(piece==false){
-            
-          }
-          
-        })
-         lightbox.addEventListener('click',e =>{
+
+     
+         cancle.addEventListener('click',e =>{
             if(e.target !== e.currentTarget)
             return
             lightbox.classList.remove('activate');
+            cancle.classList.remove('activate')
           })
     </script>
 </body>

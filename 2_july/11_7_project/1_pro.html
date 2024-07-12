@@ -16,10 +16,10 @@ jQuery: Implement interactive features such as opening/closing the lightbox and 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>lightbox</title>
     <link rel="stylesheet" href="1_pro.css">
-   
+    <title>lightbox</title>]
 </head>
+
 <body>
     <div class="grid">
         <img src="1.jpg">
@@ -27,23 +27,35 @@ jQuery: Implement interactive features such as opening/closing the lightbox and 
         <img src="3.jpg">
         <img src="4.jpg">
         <img src="5.jpg">
-        <img src="6.jpg">
+        <img src="https://unsplash.it/1600?mountain=1080">
         <img src="7.jpg">
         <img src="8.jpg">
         <img src="9.jpg">
     </div>
     
+    <img class='cancle' src="cancle.png" alt="">
+    <img class='left' src="left.png" alt="">
+    <img class='right' src="right.png" alt="">
+
     <script>
        const lightbox=document.createElement('div');
        lightbox.id='lightbox';
        document.body.appendChild(lightbox);
-
+       let cancle=document.querySelector('.cancle');
+       let left=document.querySelector('.left');
+       let right=document.querySelector('.right');
        const images = document.querySelectorAll('img')
+
        images.forEach(image =>{
         image.addEventListener('click',()=>{
+            cancle.classList.add('activate');
+            left.classList.add('activate');
+            right.classList.add('activate');
             lightbox.classList.add('activate');
+
             let img = document.createElement('img');
             img.src=image.src;
+
 
             while(lightbox.firstChild){
               lightbox.removeChild(lightbox.firstChild)
@@ -52,11 +64,43 @@ jQuery: Implement interactive features such as opening/closing the lightbox and 
           })
         })
           
-          lightbox.addEventListener('click',e =>{
+          cancle.addEventListener('click',e =>{
+            cancle.classList.remove('activate');
+            left.classList.remove('activate');
+            right.classList.remove('activate');
+
             if(e.target !== e.currentTarget)
             return
             lightbox.classList.remove('activate');
           })
+
+          images.forEach(image =>{
+          left.addEventListener('click',()=>{
+            let img = document.createElement('img');
+            img.src=image(-1).src;
+
+
+            while(lightbox.firstChild){
+              lightbox.removeChild(lightbox.firstChild)
+            }
+            lightbox.appendChild(img);
+
+          })
+        })
     </script>
 </body>
+
 </html>
+
+
+
+
+
+
+
+
+
+
+
+<!-- learning:::::          display:flex; aklu elements ne line ma gothava use nathi thatu, ani sathe sathe 'display:flex' jyare koi element ni
+  "display:none" karia tyre ane ".activate" class ma fari thi te element ne "display par show karvu hoy" tyare pan use thay 6e  -->

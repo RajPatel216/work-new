@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width:200px;
+            height:200px;
+            background-color: skyblue;
+            margin:20px;
+        }
+        .container{
+display:flex;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box" id="box1"></div>
+        <div class="box" id="box2"></div>
+        <div class="box" id="box3"></div>
+        <div class="box" id="box4"></div>
+    </div>
+    
+    <script>
+        let box = document.querySelectorAll('.box');
+        let bigbox= document.querySelectorAll('.container');
+        let div1 = document.querySelector('#box1');
+        let div2 = document.querySelector('#box2');
+        let div3 = document.querySelector('#box3');
+        let div4 = document.querySelector('#box4');
+
+        let boox= [{div1},{div2},div3,div4];
+
+        boox.forEach(function(img,index){
+            img.addEventListener('click',()=>{
+            img[index-1].innerText = 'hello world';
+            })
+             
+        })
+        
+    </script>
+</body>
+</html>
+
+
+
+<!-- function(img,index){
+    img.addEventListener('click',()=>{
+        img.innerText='hello';
+    }) -->
