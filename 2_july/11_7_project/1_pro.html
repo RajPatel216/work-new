@@ -59,14 +59,18 @@ jQuery: Implement interactive features such as opening/closing the lightbox and 
             let img = document.createElement('img');
             img.src=image.src;
 
-            left.addEventListener('click',()=>{
+            left.addEventListener('click',e=>{
               img.src=image.previousElementSibling.src;
+              // image=e.target;
             })
-
-            right.addEventListener('click',()=>{
+         
+            right.addEventListener('click',e=>{
               img.src=image.nextElementSibling.src;
+               let lol=image.nextElementSibling.src;
+              image=lol;
             })
-
+        
+         
             while(lightbox.firstChild){
               lightbox.removeChild(lightbox.firstChild)
             }
