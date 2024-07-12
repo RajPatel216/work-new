@@ -35,8 +35,10 @@ jQuery: Implement interactive features such as opening/closing the lightbox and 
     </div>
     
     <img class='cancle' src="cancle.png" alt="">
-    <img class='left' src="left.png" alt="">
-    <img class='right' src="right.png" alt="">
+    <!-- <img class='left' src="left.png" alt=""> -->
+    <h1 class="left"> < </h1>
+    <!-- <img class='right' src="right.png" alt=""> -->
+     <h1 class="right"> > </h1>
 
     <script>
        const lightbox=document.createElement('div');
@@ -49,14 +51,21 @@ jQuery: Implement interactive features such as opening/closing the lightbox and 
 
        images.forEach(image =>{
         image.addEventListener('click',()=>{
+          lightbox.classList.add('activate');
             cancle.classList.add('activate');
             left.classList.add('activate');
             right.classList.add('activate');
-            lightbox.classList.add('activate');
 
             let img = document.createElement('img');
             img.src=image.src;
 
+            left.addEventListener('click',()=>{
+              img.src=image.previousElementSibling.src;
+            })
+
+            right.addEventListener('click',()=>{
+              img.src=image.nextElementSibling.src;
+            })
 
             while(lightbox.firstChild){
               lightbox.removeChild(lightbox.firstChild)
@@ -75,16 +84,14 @@ jQuery: Implement interactive features such as opening/closing the lightbox and 
             lightbox.classList.remove('activate');
           })
 
-          left.addEventListener('click',e =>{
-            cancle.classList.remove('activate');
-            left.classList.remove('activate');
-            right.classList.remove('activate');
+          // left.addEventListener('click',e =>{
+          //   cancle.classList.remove('activate');
+          //   left.classList.remove('activate');
+          //   right.classList.remove('activate');
             
 
-            if(e.target !== e.currentTarget)
-            return
-              ;
-          })
+           
+          // })
     </script>
 </body>
 

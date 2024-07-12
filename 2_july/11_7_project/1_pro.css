@@ -39,27 +39,29 @@ img:hover{
     display:flex;
 }
 .left{
+    color:white;
     z-index:101;
-    width:29px;
-    height:29px;
+   font-size:29px;
     position:fixed;
     top:350px;
     left:200px;
     display:none;
     filter:grayscale(0%);  
+    cursor:pointer;
 }
 .left.activate{
     display:flex;
 }
 .right{
+    color:white;
     z-index:101;
-    width:29px;
-    height:29px;
+    font-size:29px;
     position:fixed;
     top:350px;
     left:1375px;
     display:none;
     filter:grayscale(0%);  
+    cursor: pointer;
 }
 .right.activate{
     display:flex;
