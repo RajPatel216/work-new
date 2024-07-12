@@ -17,9 +17,11 @@ img{
     width:270px;
     height:220px;
     filter:grayscale(80%);
+
 }
 img:hover{
     filter:grayscale(0%);
+    cursor:pointer;
 
 }
 
@@ -42,7 +44,7 @@ img:hover{
     height:29px;
     position:fixed;
     top:350px;
-    left:250px;
+    left:200px;
     display:none;
     filter:grayscale(0%);  
 }
@@ -55,7 +57,7 @@ img:hover{
     height:29px;
     position:fixed;
     top:350px;
-    left:1325px;
+    left:1375px;
     display:none;
     filter:grayscale(0%);  
 }
