@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+       <button onclick="won()">zzzzzzzzzz</button>
+       <p></p>
+    <script>
+       function won(){
+         let aa = new XMLHttpRequest();
+         aa.open('get','4_ajax2.html');
+
+         aa.onreadystatechange =function(){
+            if(this.readyState == 4 && this.status == 200 ){
+                document.querySelector("p").innerText = this.responseText;
+            }
+         }
+         aa.send();
+       }
+    </script>
+</body>
+</html>

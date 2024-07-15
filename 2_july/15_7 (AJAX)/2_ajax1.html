@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ajax</title>
+
+</head>
+<body>
+    <button onclick="load()">button</button>
+    <button id="jquery" >button2</button>
+    <div class="container"></div>
+
+    <script>
+        function load(){
+            var request = new XMLHttpRequest();
+            request.open("GET","4_ajax2.html");
+            // request.open("GET","5.json");
+            
+            request.onreadystatechange = function(){
+                if(this.readyState == 4 && this.status == 200){
+                    // console.log(this.responseText);
+                    // let ob =JSON.parse(this.responseText);
+                    // console.log(ob);
+                    document.querySelector('.container').innerText=this.responseText;
+                    }
+                    }
+                    
+                    request.send();
+        }
+    </script>
+    
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#jquery').click(function(){
+                $.get('5.json',function(data){
+                    // console.log(data);
+                    $('.container').html(data)
+                })
+            })
+})
+   </script> -->
+</body>
+</html>
