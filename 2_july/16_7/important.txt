@@ -1,0 +1,4 @@
+things to figure out:::
+
+1. jo aa quiz project,  radio button ni badle simble 'div' button thi banavia to...
+2. know "onsubmit" functionality

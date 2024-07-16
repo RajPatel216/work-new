@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Application</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <header>
+        <img src="quiz app.png" alt="quiz app" width="340px" height="75px">
+    </header>
+
+    <main>
+        <div class="container">
+            
+            <form>
+            <div class="box">
+                <p class="que">Q-1: What is the biggest Mountain in the world?</p>
+                <table border="0">
+                    <tr>
+                        <td><input type="radio" name="ans" class="ans" value="Mt. kanchanjangas" id="Mt.kanchanjanga">
+                        </td>
+                        <td><label for="Mt.kanchanjanga">Mt.kanchanjanga</label></td>
+                    </tr>
+                    <tr>
+                        <td><input type="radio" name="ans" class="ans" value="Mt. Everest" id="Mt. Everest"></td>
+                        <td><label for="Mt. Everest">Mt. Everest</label></td>
+                    </tr>
+                    <tr>
+                        <td><input type="radio" name="ans" class="ans" value="Mt. Fuji" id="Mt. Fuji"></td>
+                        <td><label for="Mt. Fuji">Mt. Fuji</label></td>
+                    </tr>
+                    <tr>
+                        <td><input type="radio" name="ans" class="ans" value="Mt. Anapurna" id="Mt. Anapurna"></td>
+                        <td><label for="Mt. Anapurna">Mt. Anapurna</label></td>
+                    </tr>
+                </table>
+            </div>
+           
+            <br>
+
+            <div class="box">
+                <p class="que">Q-2: What is the longest river in the world?</p>
+                <table border="0">
+                    <tr>
+                        <td><input type="radio" name="ans2" class="ans" value="Ganga" id="Ganga"></td>
+                        <td><label for="Ganga">Ganga</label></td>
+                    </tr>
+                    <tr>
+                        <td><input type="radio" name="ans2" class="ans" value="Amazon" id="Amazon"></td>
+                        <td><label for="Amazon">Amazon</label></td>
+                    </tr>
+                    <tr>
+                        <td><input type="radio" name="ans2" class="ans" value="Nile" id="Nile"></td>
+                        <td><label for="Nile">Nile</label></td>
+                    </tr>
+                    <tr>
+                        <td><input type="radio" name="ans2" class="ans" value="Bramhaputra" id="Bramhaputra"></td>
+                        <td><label for="Bramhaputra">Bramhaputra</label></td>
+                    </tr>
+                </table>
+            </div>
+          
+            <br>
+
+            <div class="box">
+                <p class="que">Q-3: How far the sun from earth?</p>
+                <table border="0">
+                    <tr>
+                        <td><input type="radio" name="ans3" class="ans" value="1AU" id="1AU"></td>
+                        <td><label for="1AU">approx 15,00,00,000 kms(1 A.U.)</label></td>
+                    </tr>
+                    <tr>
+                        <td><input type="radio" name="ans3" class="ans" value="1cr" id="1cr"></td>
+                        <td><label for="1cr">approx 1,00,00,000 kms</label></td>
+                    </tr>
+                    <tr>
+                        <td><input type="radio" name="ans3" class="ans" value="parsec" id="parsec"></td>
+                        <td><label for="parsec">approx 1 parsec</label></td>
+                    </tr>
+                    <tr>
+                        <td><input type="radio" name="ans3" class="ans" value="ly" id="ly"></td>
+                        <td><label for="ly">approx 1 lightyear</label></td>
+                    </tr>
+                </table>
+            </div>
+
+        <button class="submit" onclick="checkscore()">Submit </button>
+        <button class="reset" onclick="reset()">Reset </button>
+    </form>
+        </div>
+    </main>
+
+    <footer>
+        <div class="massage">
+
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
+
+
+
+
+
+<!-- <button class="ans one" onclick="falsee()">Mt. kanchanjanga</button>
+<button class="ans one" onclick="truee()">Mt. Everest</button>
+<button class="ans one" onclick="falsee()">Mt. Fuji</button>
+<button class="ans one" onclick="falsee()">Mt. Anapurna</button> -->
+
+<!-- <button class="ans two"  onclick="falsee2()">Ganga</button>
+<button class="ans two" onclick="falsee2()">Amazon</button>
+<button class="ans two" onclick="truee2()">Nile</button>
+<button class="ans two" onclick="falsee2()">Bramhaputra</button> -->
+
+<!--<button class="ans three" onclick="truee3()">approx 15,00,00,000 kms(1 A.U.)</button>
+    <button class="ans  three" onclick="falsee3()">approx 1,00,00,000 kms</button>
+    <button class="ans  three" onclick="falsee3()">approx 1 parsec</button>
+    <button class="ans  three" onclick="falsee3()">approx 1 lightyear</button> -->
