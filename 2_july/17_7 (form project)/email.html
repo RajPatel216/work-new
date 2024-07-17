@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <!-- <form action="">
+        <input type="text" class="email">
+
+        <div class="msg">
+            
+        </div>
+    </form>
+    <button class="button" onclick="cl()">s u b m i t</button> -->
+     <script>
+ 
+    //  WORKING CODE FROM INTERNET
+    let email = 'hello@@gmail.com'
+    const e = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    if(e.test(email)){
+        console.log('right')
+    }
+    else{
+        console.log('false')
+    }
+
+
+    </script>
+</body>
+</html>
+
+
+
+
+
+<!-- MY CODE NOT WORKING
+for(const mail of email){
+    if(!(mail == '@gmail.com' )){
+        msg.innerHTML = 'Please enter valid EMAIL!!';
+    }
+    else{
+        msg.innerHTML='';
+    }
+} -->

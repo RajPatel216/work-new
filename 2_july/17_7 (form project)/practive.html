@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <form action="">
+        <input type="text" class="name">
+
+        <div class="msg">
+            
+        </div>
+    </form>
+    <div></div>
+    
+    <button class="button" onclick="cl()">s u b m i t</button>
+     <script>
+         function cl(){
+            let value = document.querySelector('input').value;
+            let div = document.querySelector('div')
+        //   let msg = document.querySelector(".msg")
+        //   msg.innerText='hello worldddddd'
+            div.innerText=value;
+    }
+     </script>
+</body>
+</html>
+
+
+
+<!-- learning :::::: inside form{}, if i use onclick(), it won't work!! but if we put onclick function after form{} then it is working -->

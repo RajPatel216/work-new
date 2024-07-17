@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2</title>
+    <link rel="stylesheet" href="form_pro.css">
+</head>
+
+<body>
+
+    <table>
+        <form onsubmit="check()">
+            <tr>
+                <td colspan="2">
+                    <div id="massage"></div>
+                    <!-- <div id="massage2"></div>
+                    <div id="massage4"></div> -->
+                </td>
+            </tr>
+            <tr>
+                <td><label for="name">Name :</label></td>
+                <td><input type="text" name="name" id="name" placeholder="Enter your name"></td>
+            </tr>
+
+            <tr>
+                <td><label for="email">Email :</label></td>
+                <td><input type="text" name="email" id="email" placeholder="Enter your email"></td>
+            </tr>
+
+            <tr>
+                <td><label for="password">Password :</label></td>
+                <td> <input type="text" name="password" id="password" placeholder="Enter your password"></td>
+            </tr>
+            <!-- <input type="password" id="psw" name="psw" id="password"
+                        title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
+                        placeholder="Enter Password";
+                        required> -->
+     
+        </form>
+
+        <tr>
+            <td colspan="2" onclick="reload()"><button>Reset</button></td>
+        </tr>
+        <tr>
+            <td colspan="2" onclick="check()"><button>Submit</button></td>
+        </tr>
+    </table>
+
+
+
+    <script>
+        function check() {
+            let name = document.querySelector('#name').value;
+            let email = document.querySelector('#email').value;
+            let password = document.querySelector('#password').value;
+            let msg = document.querySelector('#massage');
+            msg.style.color = 'red';
+            let msg2 = document.querySelector('#massage');
+            msg2.style.color = 'red';
+            let msg4 = document.querySelector('#massage');
+            msg4.style.color = 'red';
+
+            if (name == '') {
+                msg.innerHTML = 'Please Enter Name';
+                msg.style.color = 'red';
+            }
+            else {
+                for (const char of name) {
+                    if (!(char >= "a" && char <= "z") &&
+                        !(char >= "A" && char <= "Z")) {
+                        //  return false;
+                        msg.innerHTML = 'Please enter only CHARACTERS!! ';
+                        msg.style.color = 'red';
+                    }
+                    else {
+                        msg.innerHTML = '';
+                    }
+                }
+            }
+
+
+
+            if (email == '') {
+                msg2.innerHTML = 'Please enter EMAIL';
+
+            }
+            else {
+
+                const e = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+                if (e.test(email)) {
+                    msg2.innerHTML = '';
+                }
+                else {
+                    msg2.innerHTML = 'Please enter VALID EMAIL';
+                }
+            }
+        
+
+        }
+
+
+        function reload() {
+            location.reload();
+        }
+    </script>
+
+</body>
+
+</html>

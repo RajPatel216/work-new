@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="">
+        <input type="text" class="name">
+        <div class="glass"></div>
+        <button class="submit" onclick="js()">Submit</button>
+    </form>
+    
+    <script>
+ 
+    </script>
+</body>
+</html>
+
+
+
+
+
+<!--   Method - 1                   locha vadi method (not display final result for long time)
+let str1 = "GeeksforGeeks";          
+let str2 = "123";
+
+let r = /^[0-9]+$/;
+
+console.log(r.test(str1));
+console.log(r.test(str2)); -->
+
+
+
+
+<!--  method - 2
+function checkAlphabets(input) {
+    for (const char of input) {
+        if (!(char >= "a" && char <= "z") &&
+            !(char >= "A" && char <= "Z")) {
+            return false;
+        }
+    }
+    return true;
+}
+const str1 = "GeeksforGeeks";
+const str2 = "Geeks123";
+console.log(checkAlphabets(str1));
+console.log(checkAlphabets(str2));  -->
+
+
+<!--   method - 3
+function myFunction() {
+    let x = document.getElementById("numb").value;
+    let text;
+    if (isNaN(x) ) {
+      text = "Input not valid";
+    } else {
+      text = "Input OK";
+    }
+    document.getElementById("demo").innerHTML = text;
+  } -->
