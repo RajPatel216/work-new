@@ -57,7 +57,7 @@
             let msg3 = document.querySelector('#massage');
             msg3.style.color = 'red';
 
-            let sign = true;
+        
 
             if(name == ''){
                 msg.innerHTML='Please Enter Name';
@@ -82,11 +82,9 @@
 
  
         if(email == ''){
-                msg2.innerHTML='Please enter EMAIL';
-                
+                msg2.innerHTML='Please enter EMAIL';     
             }
         else{
-            
             const e = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
             if(e.test(email)){
                 msg2.innerHTML ='';
