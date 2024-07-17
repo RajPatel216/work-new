@@ -40,13 +40,13 @@ all_ele.forEach(ele=>{
  })
 })
 
-let form = document.querySelector('form')
+// let form = document.querySelector('form')
 
 function reset(){
     // let radio = document.querySelectorAll('.ans');
     // radio.checked= false;
-    // location.reload();
-    form.reset();
+    location.reload();
+    // form.reset();
 }
 
 
