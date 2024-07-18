@@ -1,0 +1,67 @@
+                                          <!--  OSS   (object stringify string)
+                                                SPO    (String parse object)     -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    *{ 
+        background-color: black;
+        color: white;
+
+    }</style>
+</head>
+<body>
+    
+    <div class="demo"></div>
+    <script>
+        let text = '{"name":"S. Ramanujan", "datee":"1-1-2024", "field":"Mathematics", "age":"function () {return 3;}"}';
+        
+
+                        // string to object
+        //-------- method 1
+        // let ob=JSON.parse(text)
+        // daate =new Date(ob.datee)
+        // document.querySelector('.demo').innerHTML =  ob.game + ' //// ' + daate ;
+
+        //-------- method 2
+        //     let ob = JSON.parse(text, function(key,value){
+        //     if(key=='datee'){
+        //         return new Date(value)
+        //     }
+        //     else {
+        //         return value
+        //     }
+        // });
+        // document.querySelector('.demo').innerHTML = ob.datee  + ' //// ' + ob.name;
+
+        //-------- method 3
+        // let o = JSON.parse(text);
+        // o.age = eval('('+o.age+')');
+        // document.querySelector('.demo').innerHTML = o.age()  + ' //// ' + o.name;
+
+
+
+// --------------------------  object to string
+// stringify()
+        // let obj = {name:'jack',surname:'Patel',age:'21'}
+        // let str = JSON.stringify(obj)                                   //object conversion
+        // document.querySelector('.demo').innerHTML = str;
+
+        // document.querySelector('.demo').innerHTML = " next ";
+        
+        // let arr = ['jack','Patel','21']
+        // let str2 = JSON.stringify(arr)                                  //array conversion
+        // document.querySelector('.demo').innerHTML = str2;
+
+        const obj = {name: "John", age: function () {return 30;}, city: "New York"};
+        obj.age = obj.age.toString();
+        const myJSON = JSON.stringify(obj);
+        document.querySelector('.demo').innerHTML =  myJSON;
+
+        </script>
+    </body>
+</html>

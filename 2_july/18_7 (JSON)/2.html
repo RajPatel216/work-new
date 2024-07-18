@@ -1,0 +1,27 @@
+                                          <!--  OSS   (object stringify string)
+                                                SPO    (String parse object)     -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     
+    <div class="cla"></div>
+    
+    
+    <script>
+        let a = JSON.parse('{"name":"raj", "sports":"football", "movie":"your name"}')
+        
+        let emp ='';
+        for(let x in a){
+            emp +=a[x] + ", "; 
+        }
+
+        document.querySelector('.cla').innerHTML = emp
+    </script>
+</body>
+</html>
