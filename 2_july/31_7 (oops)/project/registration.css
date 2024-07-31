@@ -1,0 +1,36 @@
+*{
+    margin:0px;
+    padding:0px;
+    background-color: rgb(63, 61, 71);
+}
+
+.formContainer{
+     position:relative; 
+     top:20vh;
+     left:20vw;
+}
+
+.field{
+    width:16%;
+    height:30px;
+    margin-top:10px;
+     padding:2px 0px 2px 6px;
+    border:none;
+    border-radius:4px;
+    color:rgb(255, 255, 255);
+    cursor:pointer;
+    background-color: rgb(46, 43, 56);
+}
+.field:hover{
+    background-color: rgb(37, 34, 49);;
+}
+::placeholder,h4{
+    color:rgb(233, 223, 248);
+}
+a{
+    text-decoration: none;
+    display:inline-block;
+    text-align:center;
+    font-size:19px;
+    
+} 
