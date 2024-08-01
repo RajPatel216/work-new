@@ -1,5 +1,4 @@
 <?php include('final data.php') ?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -21,27 +20,23 @@
     <h3 class="backto"><a href="final registration.html">Register</a></h3>
 
     <main>
-    <div class="container">
-    <div class="row">
         <?php  foreach($cars as $key => $value) { ?>
-            
-         <div class="col-md-12 col-md-12 col-md-12 col-lg-6"> 
-           
-         <div class="blog">
+            <div class="container">
+            <div class="row">
+      <div class="sec1">
+            <div class="blog">
                <h2><?php echo $value[0]; ?></h2>
                <?php echo $value[1]; ?>
                <p><?php echo $value[2]; ?></p>
                <h4><?php echo $value[3]; ?></h4>
             </div>
+          </div>
+         </div>
         </div>
-        
-        
     <?php }
-    ?>
-    </div>
-       
 
-     </div>
+
+    ?>
 </main>
 
 
@@ -53,3 +48,19 @@
 
 </html>
 
+
+<!-- <div class="container">
+  <div class="row">
+    
+  <div class="col-sm">
+      One of three columns
+    </div>
+    <div class="col-sm">
+      One of three columns
+    </div>
+    <div class="col-sm">
+      One of three columns
+    </div>
+  
+</div>
+</div> -->
