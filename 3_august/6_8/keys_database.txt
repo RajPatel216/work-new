@@ -1,0 +1,94 @@
+Summary
+Primary Key: Uniquely identifies each record in a table. ///// Unique Key: Ensures all values are unique.
+Foreign Key: Enforces referential integrity between tables. ///// Index Key: Speeds up data retrieval.
+Composite Key: A primary key made up of multiple columns. ///// Fulltext Key: Used for full-text searches.
+
+--------------------------------------------------primary Key-------------------------------
+1. Primary Key
+Definition: A unique identifier for each record in a table.
+Characteristics:
+Must contain "unique values".
+Cannot contain "NULL values".
+A table can have only one primary key, which can consist of a single or multiple columns (composite key).
+-----------------------------------------
+CREATE TABLE employees (
+    employee_id INT,
+    first_name VARCHAR(50),
+    last_name VARCHAR(50),
+    PRIMARY KEY (employee_id)
+);
+
+--------------------------------------------------Foreign Key--------------------------------
+2. Foreign Key
+Definition: Establishes a relationship between the data in two tables.
+Characteristics:
+Enforces referential integrity by ensuring that a value in one table corresponds to a valid value in another table.
+The table containing the foreign key is called the child table, and the table containing the referenced key is called the parent table.
+------------------------------------------------------
+CREATE TABLE orders (
+    order_id INT AUTO_INCREMENT,
+    order_date DATE,
+    customer_id INT,
+    PRIMARY KEY (order_id),
+    FOREIGN KEY (customer_id) REFERENCES customers(customer_id)
+);
+
+--------------------------------------------------Unique Key---------------------------------
+3. Unique Key
+Definition: Ensures that all values in a column or a set of columns are unique.
+Characteristics:
+Allows NULL values, but only one per column.
+A table can have multiple unique keys.
+--------------------------------------------------
+CREATE TABLE users (
+    user_id INT AUTO_INCREMENT,
+    email VARCHAR(100) NOT NULL,
+    username VARCHAR(50) NOT NULL,
+    PRIMARY KEY (user_id),
+    UNIQUE (email),
+    UNIQUE (username)
+);
+
+
+-----------------------------------------------------Index Key---------------------------------
+4. Index Key
+Definition: A data structure that improves the speed of data retrieval operations on a table at the cost of additional space and slower write operations.
+Characteristics:
+Can be created on a single column or multiple columns.
+Not necessarily unique.
+------------------------------------------------------
+CREATE TABLE products (
+    product_id INT AUTO_INCREMENT,
+    product_name VARCHAR(100),
+    category_id INT,
+    PRIMARY KEY (product_id),
+    INDEX (category_id)
+);
+
+---------------------------------------------------composite Key---------------------------------
+5. Composite Key
+Definition: A primary key composed of two or more columns.
+Characteristics:
+Useful when a single column is not sufficient to uniquely identify a record.
+-------------------------------------------------------
+CREATE TABLE order_items (
+    order_id INT,
+    product_id INT,
+    quantity INT,
+    PRIMARY KEY (order_id, product_id)
+);
+
+---------------------------------------------------fulltext Key---------------------------------
+6. Fulltext Key
+Definition: A special type of index used for full-text searches.
+Characteristics:
+Used primarily for text search in large text columns.
+Supported only on CHAR, VARCHAR, and TEXT columns.
+--------------------------------------------------------
+CREATE TABLE articles (
+    article_id INT AUTO_INCREMENT,
+    title VARCHAR(255),
+    body TEXT,
+    PRIMARY KEY (article_id),
+    FULLTEXT (title, body)
+);
