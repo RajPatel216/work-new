@@ -21,11 +21,13 @@
 
     <main>
         <?php  foreach($cars as $key => $value) { ?>
+          
             <div class="container">
             <div class="row">
       <div class="sec1">
             <div class="blog">
-               <h2><?php echo $value[0]; ?></h2>
+             
+            <h2><?php echo $value[0]; ?></h2>
                <?php echo $value[1]; ?>
                <p><?php echo $value[2]; ?></p>
                <h4><?php echo $value[3]; ?></h4>
@@ -33,10 +35,8 @@
           </div>
          </div>
         </div>
-    <?php }
-
-
-    ?>
+   
+        <?php }?>
 </main>
 
 

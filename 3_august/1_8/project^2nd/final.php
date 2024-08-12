@@ -23,6 +23,7 @@
     <main>
     <div class="container">
     <div class="row">
+
         <?php  foreach($cars as $key => $value) { ?>
             
          <div class="col-md-12 col-md-12 col-md-12 col-lg-6"> 
@@ -36,8 +37,7 @@
         </div>
         
         
-    <?php }
-    ?>
+    <?php } ?>
     </div>
        
 

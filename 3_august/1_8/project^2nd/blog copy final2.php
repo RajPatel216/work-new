@@ -21,23 +21,26 @@
        
 
     
-   <?php  foreach($cars as $key => $value) {
-    
-    ?>
+   <?php  foreach($cars as $key => $value) { ?>
+
     <div class="sec1">
             <div class="blog">
-               <h2>    
-                 <?php echo $value['name']; ?>
-                 </h2>
+               
+            <h2><?php echo $value['name']; ?></h2>
+
                <img src="<?php echo $value['image']; ?>" alt="">
+              
                <p><?php echo $value['description']; ?></p>
+               
                <h4><?php echo $value['author']; ?></h4>
+
             </div>
         </div>
-    <?php }?>
-        
 
-    </main>
+    <?php } ?>
+
+
+ </main>
 
 
     <footer class="topbottom">
