@@ -103,7 +103,6 @@
 
     <div class="container">
         <h2>Registration</h2>
-      <!-- echo htmlspecialchars($_SERVER['PHP_SELF']);  -->
         <form action="registration2.php" method="POST">
             
             Name: <br>
@@ -120,7 +119,7 @@
             <input type="password" name="password" value="<?php echo $password;?>" placeholder="Type Password"> 
             <span class="error">*<?php echo $passwordErr; ?></span>
             <br><br>
-
+            
             Confirm Password: <br>
             <input type="password" name="Password2" placeholder="Confirm Password">
             <span class="error">*<?php echo $passwordErr2; ?></span>
@@ -135,5 +134,6 @@
 </html>
 
 
+<!-- echo htmlspecialchars($_SERVER['PHP_SELF']);  -->
 <!-- echo htmlspecialchars($_SERVER['PHP_SELF'])  -->
 <!-- onfocus="this.value='' -->

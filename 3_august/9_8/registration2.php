@@ -23,7 +23,7 @@ if(isset($_POST['submit'])){
     $sql="insert into registration(name,email,password) values('$name','$email','$password')";
 
     if(mysqli_query($con,$sql)){
-        echo "<script>alert('success')</script>";
+        echo "<script>alert('data inserted successfully')</script>";
         echo "<script>window.open('registration.php','_self')</script>";
     }
     else{

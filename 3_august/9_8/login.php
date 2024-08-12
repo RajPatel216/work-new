@@ -1,32 +1,44 @@
-<?php
-$connect = mysqli_connect("localhost","root", "" ,"blog") or die("connection failed");
-if(!empty($_POST['save'])){
+<?php 
+
+$con=mysqli_connect("localhost","root","","blog");
+if (!$con) {
+  die("Connection failed: " .mysqli_error($con));
+}
+else{
+  echo "";
+}
+// -------------------------------------------------------------
+
+if(isset($_POST['submit']))
+{
     $email=$_POST['email'];
     $password=$_POST['password'];
-    $query="select * from login where username='$email' and password='$password' ";
-    $result=mysqli_query($connect,$query); 
-    $count=mysqli_num_rows($result);
-    if($count>0){
-        echo "done";
+    $sql="select * from registration where email='$email' and password='$password'";
+    $que=mysqli_query($con,$sql);
+    if(mysqli_num_rows($que)>0){
+        echo "<script>alert('login successfully')</script>";
+        echo "<script>window.open('1.php','_self')</script>";
     }
     else{
-        echo "not";
+        echo "<script>alert('wrong data')</script>";
+        echo "<script>window.open('registration.php','_self')</script>";
     }
 }
 ?>
+<!-- ----------------------------------------------------------------- -->
 
 <!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>login duplicate</title>
-    <style>
-        body{
-            background-image: url(./images/plane.jpg);
-            background-size: 100vw 100vh;
-            background-repeat: no-repeat;
-        }
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>login duplicate</title>
+        <style>
+            body{
+                background-image: url(./images/plane.jpg);
+                background-size: 100vw 100vh;
+                background-repeat: no-repeat;
+            }
         .container{
             position:absolute;
             top:10%;
@@ -60,7 +72,7 @@ if(!empty($_POST['save'])){
         <h2>Login</h2>
         
         
-        <form method="POST" action="login2.php">
+        <form method="POST">
             
             Email: <br>
             <input type="email" name="email" placeholder="Type your email">
@@ -72,43 +84,9 @@ if(!empty($_POST['save'])){
             <!-- <span class="error">* echo $passwordErr; </span> -->
             <br><br>
             
-            <input class="submit" type="submit" name="save" value="submit"> <br><br><br>
+            <input class="submit" type="submit" name="submit" value="submit"> <br><br><br>
         </form>
     </div>
 </body>
 </html>
 
-
-<!-- $emailErr = $passwordErr = "";
-$email = $password = "";
-
- if($_SERVER["REQUEST_METHOD"]=="POST"){
-    
-    //EMPTY
-    if(empty($_POST['email'])){
-        $emailErr="Email is required";
-    }
-    else{
-        $name=input_data($_POST['email']);
-        if(!preg_match("/^[a-zA-Z@a-zA-Z.a-zA-Z]*$/",$email)){
-            $emailErr="Invalid Format !!";
-        }
-    }
-
-    if(empty($_POST['password'])){
-        $passwordErr="Password is required";
-    }
-    else{
-        $name=input_data($_POST['email']);
-        if(!preg_match("/^[a-zA-Z@a-zA-Z.a-zA-Z]*$/",$password)){
-            $passwordErr="Invalid Format !!";
-        }
-    }
- }
-
- function input_data($data){
-    $data = trim($data);
-    $data = stripslashes($data);
-    $data = htmlspecialchars($data);
-    return $data;
- } -->

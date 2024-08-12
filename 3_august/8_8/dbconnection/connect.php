@@ -4,6 +4,7 @@ $username = "root";
 $password = "";
 $database = "test";
 
+
 $con=mysqli_connect($servername,$username,$password,$database);
 
 if (!$con) {
