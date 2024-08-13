@@ -123,10 +123,8 @@
             
             Confirm Password: <br>
             <input type="password" name="password2" placeholder="Confirm Password">
-            <!-- <span class="error">* echo $passwordErr2;</span> -->
             
             <br><br>
-            
             <input class="submit" type="submit" name="submit" value="submit"> <br><br><br>
             
         </form>

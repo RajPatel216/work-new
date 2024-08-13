@@ -18,7 +18,7 @@ if(isset($_POST['submit']))
     $que=mysqli_query($con,$sql);
     if(mysqli_num_rows($que)>0){
         echo "<script>alert('login successfully')</script>";
-        echo "<script>window.open('1.php','_self')</script>";
+        echo "<script>window.open('blog.php','_self')</script>";
     }
     else{
         echo "<script>alert('wrong data')</script>";
@@ -26,7 +26,7 @@ if(isset($_POST['submit']))
     }
 }
 ?>
-<!-- ----------------------------------------------------------------- -->
+<!-- --------------------------------------------------------------------------------------- -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -74,10 +74,8 @@ if(isset($_POST['submit']))
         
         
         <form method="POST">
-            
             Email: <br>
             <input type="email" name="email" placeholder="Type your email">
-      
             <br><br>
             
             Password: <br>
