@@ -77,12 +77,11 @@ if(isset($_POST['submit']))
             
             Email: <br>
             <input type="email" name="email" placeholder="Type your email">
-            <!-- <span class="error">* echo $emailErr;  </span> -->
+      
             <br><br>
             
             Password: <br>
             <input type="password" name="password" placeholder="Enter Password">
-            <!-- <span class="error">* echo $passwordErr; </span> -->
             <br><br>
             
             <input class="submit" type="submit" name="submit" value="submit"> <br><br><br>
