@@ -18,35 +18,37 @@
             color:white;
             font-size:18px;
         }
+
         .viewblog{
             position:fixed;
             right:30px;
             top:20px;
             background-color:#10e310;
-            width:110px;
-            height:42px;
+            width:100px;
+            height:35px;
             border-radius:6px;
             font-weight:700;
             border:none;
             color:white;
-            font-size:18px;
+            font-size:15px;
         }
         .addblog:hover{
             background-color:rgb(15, 192, 15);
         } 
+
         #container{
-            /* border:1px solid blue; */
+            margin:6%;
             display: flex;
-            margin-top:6%;
             justify-content: center;
+            height:23em;
+           
         }
 
         form{
-            /* border:1px solid red; */
-            background-color: rgb(229, 230, 231);
+            background-color: rgb(205, 208, 211);
             position: relative;
-            width:30vw;
-            height:80vh;
+            width:22em;
+            height:23em;
             box-sizing: border-box;
             display: flex;
             align-items: center;
@@ -61,7 +63,7 @@
             width:100px;
         }
         .image{
-           margin:10px;
+           margin:10px 0px 10px 80px;
            
         }
         textarea{
@@ -71,7 +73,6 @@
         .submit{
           margin:4%;
         }
-        
         </style>
 
 </head>
@@ -81,15 +82,25 @@
    
     <div id="container">
         <form action="blog2.php" method="POST" enctype="multipart/form-data">
-       
-        <h3><input class="title" type="text" name="title" placeholder="&nbsp &nbsp &nbsp T I T L E"></h3>
+      
+        <div>
+            <label for="title">Title:</label>
+            <input class="title" type="text" name="title" id="title">
+        </div>
 
-        <input class="image" type="file" name="fileToUpload" id="fileToUpload">
+        <div>
+            <input class="image" type="file" name="fileToUpload">
+        </div>
         
-        <textarea id="txtarea" name="txtarea" rows="14" cols="36"></textarea>
-        
-        <input class="submit" type="submit" value="Submit" name="submit">
-       </form>
+        <div>
+            <textarea id="txtarea" name="txtarea" rows="14" cols="36"></textarea>
+        </div>
+          
+        <div>
+            <input class="submit" type="submit" value="Submit" name="submit">
+        </div>
+
+    </form>
     </div>
 
 </body>

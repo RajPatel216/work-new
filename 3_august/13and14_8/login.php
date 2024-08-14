@@ -1,12 +1,5 @@
 <?php 
-
-$con=mysqli_connect("localhost","root","","blog");
-if (!$con) {
-  die("Connection failed: " .mysqli_error($con));
-}
-else{
-  echo "";
-}
+include 'dbConnect.php';
 // -------------------------------------------------------------
 
 if(isset($_POST['submit']))
