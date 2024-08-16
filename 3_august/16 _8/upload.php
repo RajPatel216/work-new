@@ -1,6 +1,4 @@
 <?php
-// $target_dir2 = "viewblog_connect.php";
-// $target_file = $target_dir2 . basename($_FILES["fileToUpload"]["name"]);
 
 $target_dir = "uploads/";// Check file size
 $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);

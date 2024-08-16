@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        body{
+            background-image:url(./images/plane.jpg)
+        }
         table{
             width:40vw;
             height:10vh;
@@ -31,15 +34,23 @@
 <body>
     <table border='1' class="center">
         
-        <tr><th>Title</th><th>Image</th><th>Description</th></tr>
+        <tr>
+            <th>Title</th>
+            <th>Image</th>
+            <th>Description</th>
+        </tr>
         
         <tr>
-            <?php foreach($info as $x )  { ?>
-            <?php foreach($x as $y) { ?>
-            <td> <?php echo $y;?></td>  
-         <?php } ?>
-    </tr>
-  <?php } ?>
+            <?php foreach($info as $x)  { ?>
+            <td> <?php echo $x[0];?></td>  
+            <td> <?php echo $x[1];?></td>  
+            <td> <?php echo $x[2];?></td>  
+        </tr>
+            <?php  }?>
+            
+
+    <br><br>
+  <?php  ?>
 
 </table>
 </body>
