@@ -21,7 +21,7 @@
         <td><?php if(isset($_POST['name'])){echo $_POST['email'];} ?></td>
         </tr>
         <tr>
-        <td><?php if(isset($_POST['name'])){echo implode(', ', $_POST['skills']);} ?></td>
+        <td><?php if(isset($_POST['name'])){echo implode(',', $_POST['skills']);} ?></td>
         </tr>
         <tr>
         <td><?php if(isset($_POST['name'])){echo $_POST['gender'];} ?></td>
