@@ -37,8 +37,6 @@
         }
     }
 
-<<<<<<< HEAD
-=======
     // if(empty($_POST['password2'])){
     //     $passwordErr2="write confirm password";
     // }
@@ -49,7 +47,6 @@
     //     }
     // }
 
->>>>>>> a40ea865a9c98f752dd1ee996b74d8058c4f10bc
  }
 
  function input_data($data){
@@ -126,10 +123,8 @@
             
             Confirm Password: <br>
             <input type="password" name="password2" placeholder="Confirm Password">
-            <!-- <span class="error">* echo $passwordErr2;</span> -->
             
             <br><br>
-            
             <input class="submit" type="submit" name="submit" value="submit"> <br><br><br>
             
         </form>
