@@ -1,4 +1,3 @@
-
 <?php
  $nameErr = $emailErr = $passwordErr = $passwordErr2 = "";
  $name = $email = $password =  $password2 = "";
@@ -46,15 +45,14 @@
     //         $passwordErr2="Password must be same as above";
     //     }
     // }
+}
 
- }
-
- function input_data($data){
+function input_data($data){
     $data = trim($data);
     $data = stripslashes($data);
     $data = htmlspecialchars($data);
     return $data;
- }
+}
 ?>
 
 <!DOCTYPE html>
@@ -70,7 +68,6 @@
             background-repeat: no-repeat;
         }
         .container{
-      
           position:absolute;
           top:10%;
           left:40%;  
@@ -79,7 +76,6 @@
             position:relative;
             left:80px;
         }
-
         input{
             width:22vw;
         }
@@ -130,8 +126,6 @@
     </div>
 </body>
 </html>
-
-
 
 <!-- echo htmlspecialchars($_SERVER['PHP_SELF']);  -->
 <!-- echo htmlspecialchars($_SERVER['PHP_SELF'])  -->

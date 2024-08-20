@@ -10,6 +10,37 @@
         body{
             background-image:url(./images/plane.jpg)
         }
+        .addblog{
+            position:fixed;
+            left:30px;
+            top:20px;
+            background-color:#10e310;
+            width:110px;
+            height:42px;
+            border-radius:6px;
+            font-weight:700;
+            border:none;
+            color:white;
+            font-size:18px;
+        }
+
+        .viewblog{
+            position:fixed;
+            right:30px;
+            top:20px;
+            background-color:#10e310;
+            width:100px;
+            height:35px;
+            border-radius:6px;
+            font-weight:700;
+            border:none;
+            color:white;
+            font-size:15px;
+        }
+        .addblog:hover{
+            background-color:rgb(15, 190, 15);
+        } 
+
         table{
             width:40vw;
             height:10vh;
@@ -47,30 +78,26 @@
     </style>
 </head>
 <body>
-    <table border='1' class="center">
-        
+      <a href="blog.php"><button class="viewblog" id="addblog">Add Blogs</button></a>
+      <br>
+      <table border='1' class="center">  
         <tr>
-             <th>#</th>
+            <th>id</th>
             <th>Title</th>
             <th>Image</th>
             <th>Description</th>
             <th>Edit</th>
             <th>Delete</th> 
         </tr>
-        
-              
+             
         <?php 
         $counter = 1;
         foreach($info as $x) { ?>
         <tr>
             <td><?php echo $counter++; ?></td>
             <td contenteditable="false"><?php echo $x[0]; ?></td> 
-            <!-- <td>  echo $x[0];</td>     add php-->
             <td><img src="uploads/<?php echo $x[1];?>" alt="image" style="height:30px; width:40px;"></td> 
             <td contenteditable="false"><?php echo $x[2]; ?></td> 
-            <!-- <td>  echo $x[2];  add php</td>   -->
-            <!-- <td><img class="icon" src="./images/edit.jpg" alt="image"></td>   
-            <td><img class="icon" src="./images/delete.png" alt="image"></td>    -->
             <td><img class="icon edit" src="./images/edit.jpg" alt="edit"></td>   
             <td><img class="icon delete" src="./images/delete.png" alt="delete"></td>   
         </tr>
@@ -78,28 +105,33 @@
     </table>
  
     <script>
-        // Function to handle row deletion
+        //for delete functionality
         document.querySelectorAll('.delete').forEach(function(delBtn) {
             delBtn.addEventListener('click', function() {
-                this.closest('tr').remove();
+                let text = "Press a button!\nEither OK or Cancel.";
+                if (confirm(text) == true) {
+                    this.closest('tr').remove();
+                } else {
+                }
             });
         });
-
-        // Function to handle row editing
+         
+        //for edit functionality
         document.querySelectorAll('.edit').forEach(function(editBtn) {
             editBtn.addEventListener('click', function() {
-                let row = this.closest('tr');
-                let cells = row.querySelectorAll('td[contenteditable="false"]');
-                
+                let cells = this.closest('tr').querySelectorAll('td[contenteditable="false"]');
+                let editOn = 1
                 // Toggle editable state
+             
                 cells.forEach(function(cell) {
                     cell.contentEditable = cell.contentEditable === "false" ? "true" : "false";
-                    cell.style.backgroundColor = cell.contentEditable === "true" ? "#f0f0f0" : "";
+                    cell.style.backgroundColor = cell.contentEditable === "true" ? "" : "";
+                    cell.style.border = cell.contentEditable === "true" ? "2px solid black" : "";
                 });
 
                 // Change the icon
                 if (editBtn.src.includes('edit.jpg')) {
-                    editBtn.src = './images/save.png'; // Switch to save icon when editing
+                    editBtn.src = './images/edit.jpg'; // Switch to save icon when editing
                 } else {
                     editBtn.src = './images/edit.jpg'; // Switch back to edit icon after saving
                 }
