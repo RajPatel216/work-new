@@ -1,4 +1,4 @@
-<?php include 'viewblog_connect.php' ?>
+<?php include 'viewblog_connection.php' ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -61,11 +61,7 @@
         th{
             text-align:center;
         }
-        /* .icon{
-            height:30px;
-            width:30px;
-            margin-left:15px;
-        } */
+  
         .icon{
             height: 30px;
             width: 30px;

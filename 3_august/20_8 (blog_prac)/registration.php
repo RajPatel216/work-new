@@ -1,6 +1,7 @@
+
 <?php
- $nameErr = $emailErr = $passwordErr = $passwordErr2 = "";
- $name = $email = $password =  $password2 = "";
+ $nameErr = $emailErr = $passwordErr = "";
+ $name = $email = $password = "";
 
  if($_SERVER["REQUEST_METHOD"]=="POST"){
     
@@ -36,23 +37,20 @@
         }
     }
 
-    // if(empty($_POST['password2'])){
-    //     $passwordErr2="write confirm password";
-    // }
-    // else{
-    //     $password2=input_data($_POST['password2']);
-    //     if(!($password == $password2)){
-    //         $passwordErr2="Password must be same as above";
-    //     }
-    // }
+    if(empty($nameErr) && empty($emailErr) && empty($passwordErr)){
+        
+        include 'registration_connection.php';
+    }
 }
 
-function input_data($data){
+ 
+
+ function input_data($data){
     $data = trim($data);
     $data = stripslashes($data);
     $data = htmlspecialchars($data);
     return $data;
-}
+ }
 ?>
 
 <!DOCTYPE html>
@@ -68,6 +66,7 @@ function input_data($data){
             background-repeat: no-repeat;
         }
         .container{
+      
           position:absolute;
           top:10%;
           left:40%;  
@@ -76,6 +75,7 @@ function input_data($data){
             position:relative;
             left:80px;
         }
+
         input{
             width:22vw;
         }
@@ -99,7 +99,7 @@ function input_data($data){
     <div class="container">
         <h2>Registration</h2>
         
-        <form action="registration2.php" method="POST">
+        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST">
             
             Name: <br>
             <input type="text" name="name" value="<?php echo $name;?>" placeholder="Type your name"> 
@@ -116,9 +116,6 @@ function input_data($data){
             <span class="error">*<?php echo $passwordErr; ?></span>
             <br><br>
             
-            Confirm Password: <br>
-            <input type="password" name="password2" placeholder="Confirm Password">
-            
             <br><br>
             <input class="submit" type="submit" name="submit" value="submit"> <br><br><br>
             
@@ -126,7 +123,3 @@ function input_data($data){
     </div>
 </body>
 </html>
-
-<!-- echo htmlspecialchars($_SERVER['PHP_SELF']);  -->
-<!-- echo htmlspecialchars($_SERVER['PHP_SELF'])  -->
-<!-- onfocus="this.value='' -->

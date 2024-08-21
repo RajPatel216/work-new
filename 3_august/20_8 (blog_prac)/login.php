@@ -19,7 +19,6 @@ if(isset($_POST['submit']))
     }
 }
 ?>
-
 <!-- --------------------------------------------------------------------------------------- -->
 <!DOCTYPE html>
 <html lang="en">
@@ -28,16 +27,15 @@ if(isset($_POST['submit']))
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>login duplicate</title>
         <style>
-            body{
+        body{
                 background-image: url(./images/plane.jpg);
                 background-size: 100vw 100vh;
                 background-repeat: no-repeat;
-            }
+        }
         .container{
             position:absolute;
             top:10%;
-            left:40%;  
-            
+            left:40%;     
         }
         h2{
             position:relative;
@@ -65,10 +63,9 @@ if(isset($_POST['submit']))
         <button><a href="registration.php">Registration</a></button>
         <h2>Login</h2>
         
-        
         <form method="POST">
             Email: <br>
-            <input type="email" name="email" placeholder="Type your email">
+            <input type="text" name="email" placeholder="Type your email">
             <br><br>
             
             Password: <br>

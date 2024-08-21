@@ -83,7 +83,7 @@
     <a href="viewblog.php"><button class="viewblog" id="addblog">View Blogs</button></a>
    
     <div id="container">
-        <form action="blog2.php" method="POST" enctype="multipart/form-data">
+        <form action="blog_connection.php" method="POST" enctype="multipart/form-data">
       
         <div>
             <label for="title">Title:</label>
