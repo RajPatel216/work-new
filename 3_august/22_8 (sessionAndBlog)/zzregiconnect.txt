@@ -1,0 +1,81 @@
+<?php 
+$con = mysqli_connect('localhost', 'root', '', 'blog');
+
+if (!$con) {
+    die("Connection failed: " . mysqli_connect_error());
+}
+
+$nameErr = $emailErr = $passwordErr = $passwordErr2 = "";
+$name = $email = $password = $password2 = "";
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $isValid = true;
+
+    // Name validation
+    if (empty($_POST['name'])) {
+        $nameErr = "Name is required";
+        $isValid = false;
+    } else {
+        $name = input_data($_POST['name']);
+        if (!preg_match("/^[a-z-' ]{5,}$/i", $name)) {
+            $nameErr = "Only alphabet with a minimum of 5 letters";
+            $isValid = false;
+        }
+    }
+
+    // Email validation
+    if (empty($_POST['email'])) {
+        $emailErr = "Email is required";
+        $isValid = false;
+    } else {
+        $email = input_data($_POST['email']);
+        if (!preg_match("/[a-zA-Z0-9]+@[a-zA-Z]{5,}[.][a-zA-Z]{2,}/", $email)) {
+            $emailErr = "Must contain @ and .";
+            $isValid = false;
+        }
+    }
+
+    // Password validation
+    if (empty($_POST['password'])) {
+        $passwordErr = "Password is required";
+        $isValid = false;
+    } else {
+        $password = input_data($_POST['password']);
+        if (!preg_match("/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$/", $password)) {
+            $passwordErr = "Minimum 8 characters, including 1 lowercase, 1 uppercase, and 1 number";
+            $isValid = false;
+        }
+    }
+
+    // Confirm Password validation
+    if (empty($_POST['password2'])) {
+        $passwordErr2 = "Please confirm your password";
+        $isValid = false;
+    } else {
+        $password2 = input_data($_POST['password2']);
+        if ($password !== $password2) {
+            $passwordErr2 = "Passwords do not match";
+            $isValid = false;
+        }
+    }
+
+    // Insert data into the database if all fields are valid
+    if ($isValid) {
+        $sql = "INSERT INTO registration (name, email, password) VALUES ('$name', '$email', '$password')";
+        if (mysqli_query($con, $sql)) {
+            echo "<script>alert('Data inserted successfully');</script>";
+            echo "<script>window.open('login.php', '_self');</script>";
+        } else {
+            echo "Error: " . mysqli_error($con);
+        }
+        mysqli_close($con);
+    }
+}
+
+function input_data($data) {
+    $data = trim($data);
+    $data = stripslashes($data);
+    $data = htmlspecialchars($data);
+    return $data;
+}
+?>

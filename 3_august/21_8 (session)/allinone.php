@@ -16,21 +16,18 @@
      <button name='butto' value='get'>g e t</button>
      <br><br>
      <button name='butto' value='delete'>d e l</button>
-
-
     </form>
 </body>
 </html>
 
-<?php
 
+<?php
 session_start();
 if(isset($_POST['butto'])){
     
     if($_POST['butto']=='sett'){
         $_SESSION['lol']=$_POST['goku'];
     }
-
     if($_POST['butto']=='get'){
         echo $_SESSION['lol'];
     }
@@ -38,6 +35,5 @@ if(isset($_POST['butto'])){
         session_destroy();
     }
 }
-
 ?>
 
