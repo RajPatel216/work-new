@@ -11,7 +11,8 @@
     }
     else{
         $name=input_data($_POST['name']);
-        if(!preg_match("/^[a-z-' ]{5,}$/i",$name)){
+        // if(!preg_match("/^[a-z-' ]{5,}$/i",$name)){
+        if(!preg_match("/[a-z]/i",$name)){
             $nameErr="Only alphabet with minimum 5 letters ";
         }
     }
@@ -32,7 +33,8 @@
     }
     else{
         $password=input_data($_POST['password']);
-        if(!preg_match("/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$/",$password)){
+        // if(!preg_match("/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$/",$password)){
+        if(!preg_match("/[a-z]/i",$password)){
             $passwordErr="minimum 8 char and 1 alpha,upperAplha,number";
         }
     }

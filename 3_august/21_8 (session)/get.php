@@ -7,22 +7,27 @@
 </head>
 <body>
     <form method="post">
-        <button type="submit" name="hs" value="get">Print</button>
+        <button type="submit" name="submit" value="print">Print</button>
+        <button type="submit" name="finish" value="done">Finish</button>
     </form>
 
     <?php
     session_start();
-
-    if (isset($_POST['hs']) && $_POST['hs'] === 'get') {
+    if (isset($_POST['submit']) && $_POST['submit'] === 'print') {
         if (isset($_SESSION['naam']) && isset($_SESSION['emaill'])) {
             echo "Name: " . $_SESSION['naam'] . "<br>";
             echo "Email: " . $_SESSION['emaill'] . "<br>";
         } else {
             echo "Session variables are not set.";
-        }
     }
-    session_unset();
-    session_destroy();
-    ?>
+    }
+ 
+    if (isset($_POST['finish']) && $_POST['finish'] === 'done') {
+        session_unset();
+        session_destroy();
+        echo "Session has been destroyed.";   
+    }
+    ?>  
+
 </body>
 </html>
