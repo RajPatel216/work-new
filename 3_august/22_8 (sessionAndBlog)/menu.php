@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Home Page</title>
     <style>
         *{  
             margin:0px;
@@ -31,22 +31,13 @@
           box-sizing: border-box;
         }
 
-        .btn{
-            border:1px solid black;
-            width:150px;
-            height:24px;
-            background:transparent;
-            margin:5px;
-            position: absolute;
-            left:20px;
-            border-radius:5px;
-            
-        }
-
         a{
             text-decoration: none;
             color:black;
+            width:120px;
             background: transparent;
+            display:block;
+            width:100%;
         }
 
         button{
@@ -59,18 +50,19 @@
             border-radius:3px;
         }
         button:hover{
-            background-color: rgb(248, 240, 228);
+            background-color: rgb(240, 241, 245);
             box-shadow:2px 2px 10px;
         }
-        p,i,b{
-            background: transparent;
-            margin:15px 6px 0px 24px;
-        }
         .btns{
-            margin-top:30px;
+            margin-top:20px;
             padding-left:40px;
             background:transparent;
         }
+        p,i,b{
+            background: transparent;
+            margin:22px 5px 0px 25px;
+        }
+   
         h3{
             background: transparent;
             text-align: center;
@@ -81,12 +73,13 @@
 <body>
     <div id="box">
         <h3>HOME</h3>
+
         <p>Welcome to Stark Industries <br> <i><b> I am Iron Man </b></i></p>
          <div class="btns">
-         <button><a href="List.php">Main Menu</a></button>
+         <button><a class='check' href="List.php">List Page</a></button>
          <button><a href="registration.php">Registration</a></button>
          <br>
-         <button href="login.php"><a href="login.php">Login</a></button>
+         <button><a href="login.php">Login</a></button>
         </div>
     </div>
 </body>

@@ -4,57 +4,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>View Blogs</title>
     <style>
         
         body{
             background-image:url(./images/plane.jpg)
         }
+        h2{
+            position: fixed;
+            top:20px;
+            left:23em;
+        }
+        .container{
+            width:60vw;
+            height:60vh;
+            /* border:1px solid black; */
+            position:fixed;
+            top:90px;
+            left:16em;
+        }
         .addblog{
             position:fixed;
             left:30px;
             top:20px;
-            background-color:#10e310;
-            width:110px;
-            height:42px;
-            border-radius:6px;
-            font-weight:700;
-            border:none;
-            color:white;
-            font-size:18px;
         }
 
         .viewblog{
             position:fixed;
             right:30px;
             top:20px;
-            background-color:#10e310;
-            width:100px;
-            height:35px;
-            border-radius:6px;
-            font-weight:700;
-            border:none;
-            color:white;
-            font-size:15px;
         }
         .addblog:hover{
             background-color:rgb(15, 190, 15);
         } 
 
         table{
-            width:40vw;
-            height:10vh;
-            /* text-align:center; */
-            
+            width:60vw;
+            height:10vh;   
         }
+
         .center {
             margin-left: auto;
-            margin-right: auto;
-            
+            margin-right: auto; 
         }
         td{
-            text-align:left;
-            /* vertical-align:top; */
+            text-align:center;
             width:100px;
             height:20px;
         }
@@ -75,7 +69,9 @@
 </head>
 <body>
       <a href="blog.php"><button class="viewblog" id="addblog">Add Blogs</button></a>
-      <br>
+      <h2>Your Blogs</h2>
+
+      <div class="container">
       <table border='1' class="center">  
         <tr>
             <th>id</th>
@@ -99,6 +95,7 @@
         </tr>
         <?php } ?>
     </table>
+    </div>
  
     <script>
         //for delete functionality

@@ -11,7 +11,7 @@ if(isset($_POST['submit']))
     
     if(mysqli_num_rows($que)>0){
         echo "<script>alert('login successfully')</script>";
-        echo "<script>window.open('blog.php','_self')</script>";
+        echo "<script>window.open('List.php','_self')</script>";
     }
     else{
         echo "<script>alert('wrong data')</script>";
@@ -51,7 +51,7 @@ if(isset($_POST['submit']))
             color:black;
             text-decoration:none;
         }
-        button{
+        .btns{
             position:fixed;
             right:5%;
             top:5%;
@@ -60,7 +60,10 @@ if(isset($_POST['submit']))
 </head>
 <body>
     <div class="container">
+        <div class="btns">
         <button><a href="registration.php">Registration</a></button>
+        <button><a href="menu.php">Home</a></button>
+        </div>
         <h2>Login</h2>
         
         <form method="POST">
@@ -70,7 +73,7 @@ if(isset($_POST['submit']))
             
             Password: <br>
             <input type="password" name="password" placeholder="Enter Password">
-            <br><br>
+            <br><br><br>
             
             <input class="submit" type="submit" name="submit" value="submit"> <br><br><br>
         </form>

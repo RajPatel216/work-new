@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Blog Page</title>
     <style>
         body{
             background-image:url(./images/plane.jpg);
@@ -21,19 +21,16 @@
             color:white;
             font-size:18px;
         }
-
+        h2{
+            position: fixed;
+            top:20px;
+            left:23em;
+            margin:0px 0px 5px 0px;
+        }
         .viewblog{
             position:fixed;
             right:30px;
             top:20px;
-            background-color:#10e310;
-            width:100px;
-            height:35px;
-            border-radius:6px;
-            font-weight:700;
-            border:none;
-            color:white;
-            font-size:15px;
         }
         .addblog:hover{
             background-color:rgb(15, 192, 15);
@@ -81,7 +78,7 @@
 <body>
     <!-- <button class="addblog">Add blog</button> -->
     <a href="viewblog.php"><button class="viewblog" id="addblog">View Blogs</button></a>
-   
+    <h2>Blog</h2>
     <div id="container">
         <form action="blog_connection.php" method="POST" enctype="multipart/form-data">
       

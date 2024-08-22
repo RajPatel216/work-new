@@ -58,7 +58,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>registration real</title>
+    <title>Registration Page</title>
     <style>
         body{
             background-image: url(./images/plane.jpg);
@@ -86,7 +86,7 @@
         .submit{
             width:22.5vw;
         }
-        button{
+        .btns{
             position:fixed;
             right:5%;
             top:5%;
@@ -94,7 +94,10 @@
     </style>
 </head>
 <body>
+    <div class="btns">
     <button><a href="login.php">Login</a></button>
+    <button><a href="menu.php">Home</a></button>
+    </div>
 
     <div class="container">
         <h2>Registration</h2>
