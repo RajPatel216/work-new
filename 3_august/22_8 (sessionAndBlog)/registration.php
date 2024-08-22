@@ -62,7 +62,7 @@
     <style>
         body{
             background-image: url(./images/plane.jpg);
-            background-size: 100vw 100vh;
+            background-size: 100%;
             background-repeat: no-repeat;
         }
         .container{

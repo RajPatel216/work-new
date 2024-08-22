@@ -7,7 +7,9 @@
     <title>List</title>
     <style>
         body{
-            background-image: url('./images/plane.jpg');
+            background-image: url(./images/plane.jpg);
+            background-size: 100%;
+            background-repeat: no-repeat;
         }
         button,a{
            color:black;
@@ -71,7 +73,7 @@
 </head>
 <body>
 
-    <h2>LIST</h2>
+    <h2>All Blogs</h2>
     <br>
         <div class="addblog">
         <button><a href="menu.php">Home</a></button>
@@ -105,39 +107,39 @@
     </div>
 
     
-    <script>
-        // //for delete functionality
-        // document.querySelectorAll('.delete').forEach(function(delBtn) {
-        //     delBtn.addEventListener('click', function() {
-        //         let text = "Press a button!\nEither OK or Cancel.";
-        //         if (confirm(text) == true) {
-        //             this.closest('tr').remove();
-        //         } else {
-        //         }
-        //     });
-        // });
+    <!-- <script>
+        //for delete functionality
+        document.querySelectorAll('.delete').forEach(function(delBtn) {
+            delBtn.addEventListener('click', function() {
+                let text = "Press a button!\nEither OK or Cancel.";
+                if (confirm(text) == true) {
+                    this.closest('tr').remove();
+                } else {
+                }
+            });
+        });
          
-        // //for edit functionality
-        // document.querySelectorAll('.edit').forEach(function(editBtn) {
-        //     editBtn.addEventListener('click', function() {
-        //         let cells = this.closest('tr').querySelectorAll('td[contenteditable="false"]');
-        //         let editOn = 1
-        //         // Toggle editable state
+        //for edit functionality
+        document.querySelectorAll('.edit').forEach(function(editBtn) {
+            editBtn.addEventListener('click', function() {
+                let cells = this.closest('tr').querySelectorAll('td[contenteditable="false"]');
+                let editOn = 1
+                // Toggle editable state
              
-        //         cells.forEach(function(cell) {
-        //             cell.contentEditable = cell.contentEditable === "false" ? "true" : "false";
-        //             cell.style.backgroundColor = cell.contentEditable === "true" ? "" : "";
-        //             cell.style.border = cell.contentEditable === "true" ? "2px solid black" : "";
-        //         });
+                cells.forEach(function(cell) {
+                    cell.contentEditable = cell.contentEditable === "false" ? "true" : "false";
+                    cell.style.backgroundColor = cell.contentEditable === "true" ? "" : "";
+                    cell.style.border = cell.contentEditable === "true" ? "2px solid black" : "";
+                });
 
-        //         // Change the icon
-        //         if (editBtn.src.includes('edit.jpg')) {
-        //             editBtn.src = './images/edit.jpg'; // Switch to save icon when editing
-        //         } else {
-        //             editBtn.src = './images/edit.jpg'; // Switch back to edit icon after saving
-        //         }
-        //     });
-        // });
-    </script>
+                // Change the icon
+                if (editBtn.src.includes('edit.jpg')) {
+                    editBtn.src = './images/edit.jpg'; // Switch to save icon when editing
+                } else {
+                    editBtn.src = './images/edit.jpg'; // Switch back to edit icon after saving
+                }
+            });
+        });
+    </script> -->
 </body>
 </html>

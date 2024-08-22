@@ -77,7 +77,7 @@
 </head>
 <body>
     <!-- <button class="addblog">Add blog</button> -->
-    <a href="viewblog.php"><button class="viewblog" id="addblog">View Blogs</button></a>
+    <a href="viewblog.php"><button class="viewblog" id="addblog">Your Blogs</button></a>
     <h2>Blog</h2>
     <div id="container">
         <form action="blog_connection.php" method="POST" enctype="multipart/form-data">

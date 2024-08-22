@@ -12,22 +12,24 @@
             background-repeat:no-repeat;
             background-size:100%;   
         }
-
-        body{
-            display: flex;
-            align-items: center;
+        h2{
+            position:relative;
+            top:2em;
+            left:23em;
+            background:transparent;
         }
+      
 
         #box{
           border-radius:8px;
           border: 1px solid black;
           background: transparent;
           box-shadow: 3px 3px 10px;
-          width:15em;
-          height:15em;
+          width:20em;
+          height:20em;
           position:relative;
-          left:40%;
-          top:110px;
+          left:38%;
+          top:90px;
           box-sizing: border-box;
         }
 
@@ -54,29 +56,33 @@
             box-shadow:2px 2px 10px;
         }
         .btns{
-            margin-top:20px;
-            padding-left:40px;
+            margin-top:3em;
+            padding-left:5em;
             background:transparent;
         }
-        p,i,b{
+        p{
             background: transparent;
-            margin:22px 5px 0px 25px;
+            margin:60px 0px 0px 70px;
+        }
+        i,b{
+            background: transparent;
+            margin-left:20px;
         }
    
         h3{
             background: transparent;
             text-align: center;
-            margin-top:10px
+            margin-top:20px;
         }
     </style>
 </head>
 <body>
+    <h2>Home Page</h2>
     <div id="box">
-        <h3>HOME</h3>
 
         <p>Welcome to Stark Industries <br> <i><b> I am Iron Man </b></i></p>
          <div class="btns">
-         <button><a class='check' href="List.php">List Page</a></button>
+         <!-- <button><a class='check' href="List.php">List Page</a></button> -->
          <button><a href="registration.php">Registration</a></button>
          <br>
          <button><a href="login.php">Login</a></button>
