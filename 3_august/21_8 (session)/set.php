@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html>
 <body>
-<form action="set.php" method="post">
 
-    Name: <br>
+<form action="set.php" method="post">
+    Name:<br>
     <input type="text" name="name" required>
     <br>
-    Email: <br>
+    Email:<br>
     <input type="text" name="email" required>
     <br>
-
+    
     <button type="submit" name="button" value="submit">Submit</button>
 </form>
 </body>

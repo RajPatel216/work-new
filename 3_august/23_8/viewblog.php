@@ -16,30 +16,23 @@
             left:23em;
         }
         .container{
-            width:60vw;
+            /* width:60vw;
             height:60vh;
-            /* border:1px solid black; */
             position:fixed;
             top:90px;
-            left:16em;
-        }
-        .addblog{
+            left:16em; */
+            width:57vw;
+            height:67vh;
             position:fixed;
-            left:30px;
-            top:20px;
+            top:120px;
+            left:15em;
+            overflow-y: auto;
+            overflow-x:hidden;
+            border:none;
         }
-
-        .viewblog{
-            position:fixed;
-            right:30px;
-            top:20px;
-        }
-        .addblog:hover{
-            background-color:rgb(15, 190, 15);
-        } 
 
         table{
-            width:60vw;
+            width:99.9%;
             height:10vh;   
         }
 
@@ -65,10 +58,19 @@
             width: 100%;
             padding: 5px;
         }
+        .btns{
+            position:fixed;
+            right:5%;
+            top:5%;
+        }
+        
     </style>
 </head>
 <body>
-      <a href="blog.php"><button class="viewblog" id="addblog">Add Blogs</button></a>
+<div class="btns">
+    <a href="List.php"><button class="viewblog" id="addblog">Main Menu</button></a>
+    <a href="blog.php"><button class="viewblog" id="addblog">Add Blogs</button></a>
+    </div>
       <h2>Your Blogs</h2>
 
       <div class="container">

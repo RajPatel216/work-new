@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <form method="post">
         <button type="submit" name="submit" value="print">Print</button>
@@ -21,13 +22,14 @@
             echo "Session variables are not set.";
     }
     }
- 
     if (isset($_POST['finish']) && $_POST['finish'] === 'done') {
         session_unset();
         session_destroy();
-        echo "Session has been destroyed.";   
+        // echo "Session has been destroyed.";  
+        echo "<script>alert('session has been destroyed')</script>";
+        echo "<script>window.open('set.php','_self')</script>";
     }
-    ?>  
-
+    ?> 
+     
 </body>
 </html>

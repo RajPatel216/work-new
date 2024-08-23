@@ -1,4 +1,4 @@
-<?php include 'viewblog_connection.php' ?>
+<?php include 'List_connection.php' ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,8 +12,8 @@
             background-repeat: no-repeat;
         }
         button,a{
-           color:black;
-           text-decoration:none;
+            color:black;
+            text-decoration:none;
         }
         h2{
             position: fixed;
@@ -21,30 +21,34 @@
             left:23em;
         }
         .container{
-            width:60vw;
-            height:60vh;
-            /* border:1px solid black; */
+            width:57vw;
+            height:67vh;
+            border:1px solid black;
             position:fixed;
             top:120px;
             left:15em;
-        }
-        .btn{
-            position: fixed;
-            top:25px;
-            right:50px;
-            text-decoration:none;
-            color:black;
-        }
-        .btns{
-            position:fixed;
-            top:90px;
-            left:45em;
+            overflow-y: auto;
+            /* overflow-x: hidden;   */
+            }
+            
+            .btn{
+                position: fixed;
+                top:25px;
+                right:50px;
+                text-decoration:none;
+                color:black;
+            }
+            .btns{
+                position:fixed;
+                top:90px;
+                left:45em;
+                
+            }
+            table{
+                width: 99.9%;
+                height:80vh;   
+            }
 
-        }
-        table{
-            width:40em;
-            height:10vh;   
-        }
         
         .center {
             margin-left: auto;
@@ -60,11 +64,6 @@
             text-align:center;
         }
   
-        /* .icon{
-            height: 30px;
-            width: 50px;
-            cursor: pointer;
-        } */
         input[type="text"], input[type="email"]{
             width: 100%;
             padding: 5px;
@@ -76,19 +75,13 @@
     <h2>All Blogs</h2>
     <br>
         <div class="btns">
+            <form action="" method="post">
             <button type="submit" name="finish" value="done">Log out</button>
-            <!-- if (isset($_POST['finish']) && $_POST['finish'] === 'done') {
-    session_unset();
-    session_destroy();
-    echo "<script>alert('done')</script>"; 
-    // echo "<script>window.open('login.php','_self')</script>";
-  } -->
-  
             <button><a href="menu.php">Home</a></button>
             <button><a href="blog.php">Add Blog</a></button>
+        </form>
     </div>
-
-    <div class="container">
+ <div class="container">
     <table border='1' class="center">  
         <tr>
             <th>id</th>
@@ -112,3 +105,4 @@
 
 </body>
 </html>
+

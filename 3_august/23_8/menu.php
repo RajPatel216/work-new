@@ -18,8 +18,6 @@
             left:23em;
             background:transparent;
         }
-      
-
         #box{
           border-radius:8px;
           border: 1px solid black;
@@ -32,7 +30,6 @@
           top:90px;
           box-sizing: border-box;
         }
-
         a{
             text-decoration: none;
             color:black;
@@ -41,7 +38,6 @@
             display:block;
             width:100%;
         }
-
         button{
             background: transparent;
             width:150px;
@@ -68,7 +64,6 @@
             background: transparent;
             margin-left:20px;
         }
-   
         h3{
             background: transparent;
             text-align: center;

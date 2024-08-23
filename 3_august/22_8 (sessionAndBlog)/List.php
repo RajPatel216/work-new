@@ -77,12 +77,7 @@
     <br>
         <div class="btns">
             <button type="submit" name="finish" value="done">Log out</button>
-            <!-- if (isset($_POST['finish']) && $_POST['finish'] === 'done') {
-    session_unset();
-    session_destroy();
-    echo "<script>alert('done')</script>"; 
-    // echo "<script>window.open('login.php','_self')</script>";
-  } -->
+     
   
             <button><a href="menu.php">Home</a></button>
             <button><a href="blog.php">Add Blog</a></button>
@@ -112,3 +107,4 @@
 
 </body>
 </html>
+
