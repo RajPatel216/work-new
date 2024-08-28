@@ -41,8 +41,7 @@
             .btns{
                 position:fixed;
                 top:90px;
-                left:45em;
-                
+                left:45em;     
             }
             table{
                 width: 99.9%;
