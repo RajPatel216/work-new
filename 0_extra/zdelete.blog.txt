@@ -1,0 +1,18 @@
+<?php
+include 'dbConnect.php';
+
+$id = $_POST['id'];
+
+// Sanitize the input
+$id = intval($id);
+
+$sql = "DELETE FROM blogs WHERE id=$id";
+
+if (mysqli_query($con, $sql)) {
+    echo 'success';
+} else {
+    echo 'error';
+}
+
+mysqli_close($con);
+?>

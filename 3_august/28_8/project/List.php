@@ -1,4 +1,5 @@
 <?php include 'List_connection.php' ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,32 +29,29 @@
             top:120px;
             left:15em;
             overflow-y: auto;
-            /* overflow-x: hidden;   */
-            }
-            
-            .btn{
-                position: fixed;
-                top:25px;
-                right:50px;
-                text-decoration:none;
-                color:black;
-            }
-            .btns{
-                position:fixed;
-                top:90px;
-                left:45em;     
-            }
-            table{
-                width: 99.9%;
-                height:80vh;   
-            }
-
-        
+            /* overflow-x: hidden; */
+        }
+        .btn{
+            position: fixed;
+            top:25px;
+            right:50px;
+            text-decoration:none;
+            color:black;
+        }
+        .btns{
+            position:fixed;
+            top:90px;
+            left:45em;
+        }
+        table{
+            width: 99.9%;
+            height:10%;
+        }
         .center {
             margin-left: auto;
             margin-right: auto; 
         }
-  
+            
         td{
             text-align:center;
             width:100px;
@@ -61,13 +59,14 @@
         }
         th{
             text-align:center;
+        
         }
-  
+        
         input[type="text"], input[type="email"]{
             width: 100%;
             padding: 5px;
         }
-    </style>
+            </style>
 </head>
 <body>
 
@@ -95,13 +94,13 @@
         <tr>
             <td><?php echo $counter++; ?></td>
             <td contenteditable="false"><?php echo $x[0]; ?></td> 
-            <td><img src="uploads/<?php echo $x[1];?>" alt="image" style="height:30px; width:40px;"></td> 
+            <td><img src="uploads/<?php echo $x[1];?>" alt="image" style="height:31px; width:42px;"></td> 
             <td contenteditable="false"><?php echo $x[2]; ?></td> 
         </tr>
         <?php } ?>
+
     </table>
     </div>
-
 </body>
 </html>
 

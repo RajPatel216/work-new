@@ -16,11 +16,7 @@
             left:23em;
         }
         .container{
-            /* width:60vw;
-            height:60vh;
-            position:fixed;
-            top:90px;
-            left:16em; */
+
             width:57vw;
             height:67vh;
             position:fixed;
@@ -85,7 +81,7 @@
         </tr>
              
         <?php 
-        $counter = 1;
+        $counter = 1;   
         foreach($info as $x) { ?>
         <tr>
             <td><?php echo $counter++; ?></td>
@@ -93,7 +89,8 @@
             <td><img src="uploads/<?php echo $x[1];?>" alt="image" style="height:30px; width:40px;"></td> 
             <td contenteditable="false"><?php echo $x[2]; ?></td> 
             <td><img class="icon edit" src="./images/edit.jpg" alt="edit"></td>   
-            <td><img class="icon delete" src="./images/delete.png" alt="delete"></td>   
+            <td><a href="?id="$counter><img class="icon delete" src="./images/delete.png" alt="delete"></a></td>
+            <!-- <td><img class="icon delete" src="./images/delete.png" alt="delete"></td>    -->
         </tr>
         <?php } ?>
     </table>
@@ -101,7 +98,7 @@
  
     <script>
         //for delete functionality
-        document.querySelectorAll('.delete').forEach(function(delBtn) {
+        document.querySelectorAll('.delete').forEach(function(delBtn){
             delBtn.addEventListener('click', function() {
                 let text = "Press a button!\nEither OK or Cancel.";
                 if (confirm(text) == true) {
@@ -116,7 +113,6 @@
             editBtn.addEventListener('click', function() {
                 let cells = this.closest('tr').querySelectorAll('td[contenteditable="false"]');
                 let editOn = 1
-                // Toggle editable state
              
                 cells.forEach(function(cell) {
                     cell.contentEditable = cell.contentEditable === "false" ? "true" : "false";

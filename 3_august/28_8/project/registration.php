@@ -43,8 +43,6 @@
     }
 }
 
- 
-
  function input_data($data){
     $data = trim($data);
     $data = stripslashes($data);
@@ -66,7 +64,6 @@
             background-repeat: no-repeat;
         }
         .container{
-      
           position:absolute;
           top:10%;
           left:40%;  
@@ -75,7 +72,6 @@
             position:relative;
             left:80px;
         }
-
         input{
             width:22vw;
         }

@@ -19,7 +19,7 @@ if(isset($_POST["submit"])) {
 // Check if file already exists
 if (file_exists($target_file)) {
   echo "Sorry, file already exists.";
-  $uploadOk = 1;
+  $uploadOk = 0;
 } 
 
 //file ni size check karse
