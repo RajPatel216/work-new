@@ -47,7 +47,7 @@ $result = mysqli_query($con, $sql);
                     <td><?=$row['bio'] ?></td>
                     <td><?=$row['file'] ?></td>
                     <td><?=$row['city'] ?></td>
-                    <td><a href="edit.php"><button type='submit' value='edit'>Edit</button></a></td>
+                    <td><a href="edit.php?id=<?=$row['id'] ?>"><button type='submit' value='edit'>Edit</button></a></td>
                     <td><button type='submit' value='delete'>Delete</button></td>
                 </tr>
                 <?php }
