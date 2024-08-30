@@ -2,9 +2,6 @@
 include 'dbConnect.php';
 
 $sql = "SELECT title,image,description FROM blogs where user_id = ".$_SESSION['user_id'];
-$del = "DELETE FROM blogs where"
-$edit = "ALTER title,description FROM blogs;"
-
 
 $result = mysqli_query($con, $sql);
 
@@ -13,7 +10,6 @@ $info=[];
 if (mysqli_num_rows($result) > 0) {
   while($row = mysqli_fetch_assoc($result)) {
       $info[] = array($row["title"], $row["image"], $row["description"]);
-  
 }
  }
 else {
