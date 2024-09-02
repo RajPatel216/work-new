@@ -83,36 +83,17 @@
         <?php 
         $counter = 1;   
         foreach($info as $x) { ?>
-        <tr>
-            <td><?php echo $counter++; ?></td>
-            <td><?php echo $x[0]; ?></td> 
-            <td><img src="uploads/<?php echo $x[1];?>" alt="image" style="height:30px; width:40px;"></td> 
-            <td><?php echo $x[2]; ?></td> 
-            <td><a href='update.php?id=<?php echo $id;?>'><img class="icon edit" src="./images/edit.jpg" alt="edit"></a></td>   
-            <td><img class="icon delete" src="./images/delete.png" alt="delete"></td>   
+            <tr>
+            <td><?php echo $counter++ ?></td>
+            <td><?php echo $x[1];?></td> 
+            <td><img src="uploads/<?php echo $x[2];?>" alt="image" style="height:30px; width:40px;"></td> 
+            <td ><?php echo $x[3]; ?></td> 
+            <td><a href="update_blog.php?id=<?php echo $x[0];?>"><img class="icon edit" src="./images/edit.jpg" alt="edit"></a></td>   
+            <td><a href="delete_blog.php?id=<?php echo $x[0];?>"><img class="icon delete" src="./images/delete.png" alt="delete"></a></td>   
         </tr>
         <?php } ?>
     </table>
 </div>
-
-<script>
-    
-        //for delete functionality
-        document.querySelectorAll('.delete').forEach(function(delBtn){
-            delBtn.addEventListener('click', function() {
-                let text = "Press a button!\nEither OK or Cancel.";
-                if (confirm(text) == true) {
-                    this.closest('tr').remove();
-                    <?php DELETE * FROM blogs WHERE user_id  ?>
-                }
-            });
-        });
-           
-           
-           
-           
-           
-           </script>
 
 </body>
 </html>

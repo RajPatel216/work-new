@@ -23,9 +23,7 @@ if(isset($_POST['submit'])){
 ?>
 
 <html>
-<head>
-<title>Register Demo</title>
-</head>
+<head> <title>Register Demo</title> </head>
 
 <body>
 <form action="" method="POST">
@@ -60,9 +58,7 @@ if(isset($_POST['submit'])){
         <option name="city" value="ahmedabad" selected>Ahmedabad</option>
         <option name="city" value="surat">Surat</option>
         <option name="city" value="patan">Patan</option>
-        <option name="city" value="patan">Mahesana</option>
-        <option name="city" value="patan">kachh</option>
-        <option name="city" value="patan">rajkot</option>
+
     </select>
     <br><br>
 
