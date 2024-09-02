@@ -25,7 +25,8 @@ $query2="update blogs set title = '$title', description='$description' where id=
  if(!$result){
     die("query Failed".mysqli_error());
  }else{
-    header('location : viewblog.php');
+    header('location: viewblog.php');   
+    exit();
  }
 }
 ?>
@@ -82,10 +83,10 @@ $query2="update blogs set title = '$title', description='$description' where id=
 <body>
 <h2>Update Blogs</h2>
 
-<form action="update_blog.php?id_new=<?php echo $id; ?>" method="post">
+<form action="update_blog.php?id=<?php echo $id; ?>" method="post">
 <div class="container">
  
-    <?php $counter = 1;   ?>
+    <?php $counter = 1; ?>
     Title: <br>
     <input type="hidden" name='title' value="<?= $row['id'] ?>">
     <input type="text" name='title' value="<?= isset($row['title'])? $row['title']:""; ?>">

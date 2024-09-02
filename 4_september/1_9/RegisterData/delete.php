@@ -12,32 +12,7 @@ if(!$result2){
     die("query failed".mysqli_error());
 }
 else{
-     echo "<script>alert('data deleted successfully')</script>";
+     echo "<script>confirm('data deleted successfully')</script>";
      echo "<script>window.open('list.php','_self')</script>";
 }
 ?>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//----------------------------------------------------------------  delete functionality
-$del ="delete from users where id = '$id'";
-$result2 = mysqli_query($con,$del);
-if(!$result2){
-    die("query failed".mysqli_error());
-}
-else{
-     echo "< script>alert('data deleted successfully')</ script>";
-     echo "< script>window.open('list.php','_self')</ script>";
-}

@@ -1,32 +1,40 @@
-
 <?php
 
 include 'viewblog_connection.php';
 
 if(isset($_GET['id'])){
     $id = $_GET['id'];
-    $query="select * from 'blogs' where 'id' =".$id;
+    $query="select * from blogs where id =". $id;      
+
+      // dont use too much inverted commas like i used ('blogs') it will give you error so use only (blogs)
 
  $result = mysqli_query($con, $query);
- if($result->num_rows > 0){
-        $row=mysqli_fetch_assoc($result);
-        print_r($row);
+ if($result && mysqli_num_rows($result) > 0){
+     $row=mysqli_fetch_assoc($result);
+    }
+    else {
+        echo "Blog not found.";
+        exit;
     }
 }
 
+if(isset($_GET['id'])){
+    $id = $_GET['id'];
 if(isset($_POST['update_students'])){
-
-$title=$_POST['title'];
-$description=$_POST['description'];
+    $title=$_POST['title'];
+    $description=$_POST['description'];    
 
 $query2="update blogs set title = '$title', description='$description' where id=".$id;
 
-    $result = mysqli_query($con,$query2);
+$result = mysqli_query($con,$query2);
  if(!$result){
     die("query Failed".mysqli_error());
  }else{
-    header('location : viewblog.php');
+   
+    header('location: viewblog.php');   
+    exit();
  }
+}
 }
 ?>
 
@@ -82,12 +90,13 @@ $query2="update blogs set title = '$title', description='$description' where id=
 <body>
 <h2>Update Blogs</h2>
 
-<form action="update_blog.php?id_new=<?php echo $id; ?>" method="post">
+<form action="" method="post">
 <div class="container">
  
-    <?php $counter = 1;   ?>
+    <?php $counter = 1; ?>
     Title: <br>
     <input type="hidden" name='title' value="<?= $row['id'] ?>">
+    <!-- <input type="text" name='title' value="<?= isset($row['title'])? $row['title']:""; ?>"> -->
     <input type="text" name='title' value="<?= isset($row['title'])? $row['title']:""; ?>">
     <br><br>
     Description: <br>

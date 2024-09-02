@@ -9,7 +9,6 @@ if(isset($_POST['submit'])){
     $hobby= implode(", ",$_POST['hobby']);
     $bio =$_POST['bio'];
     $file =$_FILES["file"]["name"];
-    // $file=$_POST['file'];
     $city=$_POST['city'];
 
     $sql="insert into users(name,email,gender,hobby,bio,file,city) values('$name', '$email', '$gender', '$hobby', '$bio' ,'$file','$city') ";    
@@ -30,12 +29,11 @@ if(isset($_POST['submit'])){
 <head> <title>Register Demo</title> </head>
 
 <body>
-    <!-- ----------------------------------------enctype is used for uploading image in form -->
-<form action="" method="POST" enctype="multipart/form-data">      
+
+<form action="" method="POST" enctype="multipart/form-data">     <!-- enctype="multipart/form-data" aa form ma data upload karva use thay!!!!  -->
 <div class="container" style="width: 300px;" >
 
-<div style="border: 1px solid; padding: 25px;">
-  
+<div style="border: 1px solid; padding: 25px;"> 
     <h2>Add</h2>
     <label for="name">Name:</label><br>
     <input type="text" name="name" id="name" placeholder="Enter Name"><br>
@@ -63,13 +61,10 @@ if(isset($_POST['submit'])){
         <option name="city" value="ahmedabad" selected>Ahmedabad</option>
         <option name="city" value="surat">Surat</option>
         <option name="city" value="patan">Patan</option>
-
     </select>
     <br><br>
-
-    <!-- <a href="edit.php"> -->
       <button type='submit' name='submit' value='submit'>Submit</button>
-    <!-- </a> -->
+  
 </div>
 </div>
 </form>
@@ -79,13 +74,28 @@ if(isset($_POST['submit'])){
 
 
 
+
+
+
+
+
+
+
+
+
+
+
 <!-- ----------------------- Things i've been told to create in a from ---------------------- -->
-<!-- <label>Title: </label><br>
+
+<!-- 
+<label>Title: </label><br>
 <input type="text" name='title' value="" placeholder="Enter Title">
 <br>
+
 <label>Description: <label><br>
 <input type="text" name='description' value="" placeholder="Enter Description">
-<br> -->
+<br>
+ -->
 
 
 <!--  name   email    gender    hobby    bio     profile      City -->

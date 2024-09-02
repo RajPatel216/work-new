@@ -15,13 +15,13 @@ if(isset($_GET['id'])){
 if(isset($_GET['id'])){
     $id = $_GET['id'];  
 if(isset($_POST['submit'])){
+    
         include 'upload.php';
         $name = $_POST['name'];
         $email = $_POST['email'];
         $gender = $_POST['radio'];
         $hobby= implode(", ",$_POST['hobby']);
         $bio = $_POST['bio'];
-        // $file=$_FILES['file'];
         $filename=$_FILES["file"]['name'];
         $city=$_POST['city'];
     
@@ -34,13 +34,11 @@ if(isset($_POST['submit'])){
     }else{
         
         echo "Inserted";
-        // redirect('list.php');
-        header('Location: list.php');   
+        header('location: list.php');   
         exit();
     }
 }
 }
-
 ?>
 
 <html>
