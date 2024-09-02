@@ -8,21 +8,18 @@
         body{
             background-image:url(./images/plane.jpg);
         }
- 
         h2{
             position: fixed;
             top:20px;
             left:23em;
             margin:0px 0px 5px 0px;
         }
-
         #container{
             margin:6%;
             display: flex;
             justify-content: center;
             height:23em;
         }
-
         form{
             background-color: rgb(205, 208, 211);
             position: relative;
@@ -62,11 +59,11 @@
 </head>
 <body>
     <!-- <button class="addblog">Add blog</button> -->
-     <div class="btns">
-    <a href="List.php"><button class="viewblog" id="addblog">Main Menu</button></a>
-    <a href="viewblog.php"><button class="viewblog" id="addblog">Your Blogs</button></a>
+    <div class="btns">
+         <a href="List.php"><button class="viewblog" id="addblog">Main Menu</button></a>
+         <a href="viewblog.php"><button class="viewblog" id="addblog">Your Blogs</button></a>
     </div>
-    <h2>Blog</h2>
+         <h2>Blog</h2>
     
     <div id="container">
         <form action="blog_connection.php" method="POST" enctype="multipart/form-data">
@@ -76,10 +73,8 @@
             <input class="title" type="text" name="title" id="title">
         </div>
 
-  
-              <input type="file" name="fileToUpload" id="fileToUpload">
+            <input type="file" name="fileToUpload" id="fileToUpload">
 
-        
         <div>
             <textarea id="txtarea" name="txtarea" rows="14" cols="36"></textarea>
         </div>

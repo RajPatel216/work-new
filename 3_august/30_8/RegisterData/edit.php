@@ -41,10 +41,10 @@ if(isset($_GET['id'])){
     <input type="checkbox" name="hobby[]" id="hobby3" value="2" <?= ($row['hobby'] == 2) ? 'checked' : '' ?>><span>Dancing</span><br><br>
     
     <label>Write bio :</label><br>
-    <textarea name="bio" width="400px"></textarea><br><br>
+    <textarea name="bio" width="400px" value="<?= $row['bio']?>"></textarea><br><br>
     
     <label>Add File:</label><br>
-    <input type="file" name='file' accept="image/jpg, image/jpeg, .doc"><br><br>
+    <input type="file" name='file' accept="image/jpg, image/jpeg, .doc" value="<?= $row['file']?>"><br><br>
     
     <label for="">City:</label><br>
     <select name="city">

@@ -8,7 +8,6 @@ if(isset($_POST['submit'])){
       $password = $_POST['password'];
 
       $sql="insert into users(name,email,password) values('$name' , '$email' , '$password') ";    
-      
 
       if(mysqli_query($con,$sql)){
         echo "<script>alert('Registration Successfull')</script>";
@@ -20,7 +19,7 @@ if(isset($_POST['submit'])){
         $_SESSION['name'] = $name;
         $_SESSION['email'] = $email;    
         // print_r($_SESSION);   //if error acqure then print path like this
-    }
+      }
     else{
       echo "error:".mysqli_error($con);
       echo "error".$sql."<br>".mysqli_error($con);
