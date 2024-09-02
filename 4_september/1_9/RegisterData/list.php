@@ -45,10 +45,12 @@ $result = mysqli_query($con, $sql);
                     <td><?=$gender ?></td>
                     <td><?=$hobbyDisplay ?></td>
                     <td><?=$row['bio'] ?></td>
-                    <td><?=$row['file'] ?></td>
+                    <td><img src="files/<?=$row['file'] ?>" alt="image" style="height:30px; width:40px;"></td>
                     <td><?=$row['city'] ?></td>
-                    <td><a href="edit.php?id=<?=$row['id'] ?>"><button type='submit' value='edit'>Edit</button></a></td>
-                    <td><button type='submit' value='delete'>Delete</button></td>
+
+                    <td><a href="edit.php?id=<?=$row['id'] ?>"><button type='submit' name='edit' value='edit'>Edit</button></a></td>
+                    <td><a href="delete.php?id=<?=$row['id'] ?>"><button type='submit' value='delete'>Delete</button></td>
+       
                 </tr>
                 <?php }
             } ?>
@@ -58,18 +60,3 @@ $result = mysqli_query($con, $sql);
 </body>
 </html>
 
-
-
-
-
-
-
-
- <!-- if($hobbies == '0'){
- $hobbyText[] = "Singing";
-    }
-    else if($hobbies == '1'){
-        $hobbyText[] = "cooking";
-    }else {
-    } 
-    $hobbyText[]="dancing"; -->

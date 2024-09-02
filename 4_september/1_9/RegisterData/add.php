@@ -1,12 +1,15 @@
 <?php
 include 'connect.php';
+
 if(isset($_POST['submit'])){
+   include 'upload.php';
     $name = $_POST['name'];
     $email = $_POST['email'];
     $gender = $_POST['radio'];
     $hobby= implode(", ",$_POST['hobby']);
     $bio =$_POST['bio'];
-    $file=$_POST['file'];
+    $file =$_FILES["file"]["name"];
+    // $file=$_POST['file'];
     $city=$_POST['city'];
 
     $sql="insert into users(name,email,gender,hobby,bio,file,city) values('$name', '$email', '$gender', '$hobby', '$bio' ,'$file','$city') ";    
@@ -20,20 +23,22 @@ if(isset($_POST['submit'])){
     }
     mysqli_close($con);
 }
+
 ?>
 
 <html>
 <head> <title>Register Demo</title> </head>
 
 <body>
-<form action="" method="POST">
+    <!-- ----------------------------------------enctype is used for uploading image in form -->
+<form action="" method="POST" enctype="multipart/form-data">      
 <div class="container" style="width: 300px;" >
 
 <div style="border: 1px solid; padding: 25px;">
   
     <h2>Add</h2>
     <label for="name">Name:</label><br>
-    <input type="text" name="name" id="name" placeholder="Enter Namee"><br>
+    <input type="text" name="name" id="name" placeholder="Enter Name"><br>
     
     <label for="emaill">Email:</label><br>
     <input type="text" name="email" id="emaill" placeholder="Enter Email"><br><br> 
@@ -51,7 +56,7 @@ if(isset($_POST['submit'])){
     <textarea name="bio" width="400px"></textarea><br><br>
     
     <label>Add File:</label><br>
-    <input type="file" name='file' accept="image/jpg, image/jpeg, .doc"><br><br>
+    <input type="file" name='file'><br><br>
     
     <label for="">City:</label><br>
     <select name="city">
@@ -62,7 +67,9 @@ if(isset($_POST['submit'])){
     </select>
     <br><br>
 
-    <a href="edit.php"><button type='submit' name='submit' value='submit'>Submit</button></a>
+    <!-- <a href="edit.php"> -->
+      <button type='submit' name='submit' value='submit'>Submit</button>
+    <!-- </a> -->
 </div>
 </div>
 </form>

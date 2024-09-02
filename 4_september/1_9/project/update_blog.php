@@ -88,10 +88,10 @@ $query2="update blogs set title = '$title', description='$description' where id=
     <?php $counter = 1;   ?>
     Title: <br>
     <input type="hidden" name='title' value="<?= $row['id'] ?>">
-    <input type="text" name='title' value="<?= $row['title'] ?>">
+    <input type="text" name='title' value="<?= isset($row['title'])? $row['title']:""; ?>">
     <br><br>
     Description: <br>
-    <input type="text" name='description' value="<?= $row['description'] ?>">
+    <input type="text" name='description' value="<?= isset($row['description'])? $row['description']:"";  ?>">
     <br><br>
     <button type='submit' name='update_students' value='update' style='width:100px,height:100px'>Submit</button>
 
