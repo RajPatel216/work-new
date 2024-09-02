@@ -27,7 +27,6 @@ if(isset($_POST['submit'])){
     
     $query2="update users set name = '$name', email='$email', gender='$gender', hobby='$hobby', bio='$bio', file='$filename', city='$city' where id=".$id;
    
-
     $result = mysqli_query($con,$query2);
     if(!$result){
         die("query Failed".mysqli_error());

@@ -21,10 +21,12 @@ if(isset($_GET['id'])){
 if(isset($_GET['id'])){
     $id = $_GET['id'];
 if(isset($_POST['update_students'])){
+    include 'upload.php';
     $title=$_POST['title'];
-    $description=$_POST['description'];    
+    $description=$_POST['description'];   
+    $image =$_FILES["fileToUpload"]["name"];
 
-$query2="update blogs set title = '$title', description='$description' where id=".$id;
+$query2="update blogs set title = '$title', image='$image', description='$description' where id=".$id;
 
 $result = mysqli_query($con,$query2);
  if(!$result){
@@ -90,23 +92,41 @@ $result = mysqli_query($con,$query2);
 <body>
 <h2>Update Blogs</h2>
 
-<form action="" method="post">
+<form action="" method="post" enctype="multipart/form-data">
 <div class="container">
  
     <?php $counter = 1; ?>
+   
     Title: <br>
     <input type="hidden" name='title' value="<?= $row['id'] ?>">
-    <!-- <input type="text" name='title' value="<?= isset($row['title'])? $row['title']:""; ?>"> -->
     <input type="text" name='title' value="<?= isset($row['title'])? $row['title']:""; ?>">
     <br><br>
-    Description: <br>
-    <input type="text" name='description' value="<?= isset($row['description'])? $row['description']:"";  ?>">
-    <br><br>
-    <button type='submit' name='update_students' value='update' style='width:100px,height:100px'>Submit</button>
 
+    Description: <br>
+    <input type="text" name='description' value="<?= isset($row['description'])? $row['description']:"";  ?>"> 
+    <br><br>
+
+    <input type="file" name="fileToUpload" id="fileToUpload">
+    <br><br>
+    
+    <button type='submit' name='update_students' value='update' style='width:100px,height:100px'>Submit</button>
 
 </div>
 </form>
 
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- <input type="text" name='title' value="< ?= isset($row['title'])? $row['title']:""; ?>"> -->

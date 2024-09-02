@@ -1,6 +1,9 @@
+
 <?php
+// print_r($_FILES);die;
 $target_dir = "uploads/";
 $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
+
 $uploadOk = 1;
 $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
 
@@ -16,13 +19,11 @@ if(isset($_POST["submit"])) {
   }
 }
 
-// Check if file already exists
 if (file_exists($target_file)) {
   echo "Sorry, file already exists.";
-  $uploadOk = 0;
+  $uploadOk = 1;
 } 
 
-//file ni size check karse
 if ($_FILES["fileToUpload"]["size"] > 5000000) {
   echo "Sorry, your file is too large.";die;
   $uploadOk = 0;
