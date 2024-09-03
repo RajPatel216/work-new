@@ -1,5 +1,5 @@
-array  ->  implode  ->    string 
-string  ->  explode ->    array
+array  ->  implode  ->    string  (AIS)
+string  ->  explode ->    array   (SEA)
 
 ---------------------------on 23/7/24-------------------------------------------------------------------------------------
 Parse error or Syntax Error:

@@ -14,17 +14,24 @@ if(isset($_GET['id'])){
 
 if(isset($_GET['id'])){
     $id = $_GET['id'];  
+
 if(isset($_POST['submit'])){
-    
+    if(!empty($_FILES["file"]["name"])){
+        $filename_name = $_FILES["file"]["name"];
         include 'upload.php';
-        $name = $_POST['name'];
-        $email = $_POST['email'];
-        $gender = $_POST['radio'];
-        $hobby= implode(", ",$_POST['hobby']);
-        $bio = $_POST['bio'];
-        $filename=$_FILES["file"]['name'];
-        $city=$_POST['city'];
-    
+    }
+    else{
+        $filename_name=$_POST["file_old"];
+    }
+   
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $gender = $_POST['radio'];
+    $hobby= implode(", ",$_POST['hobby']);
+    $bio = $_POST['bio'];
+    $city=$_POST['city'];
+    $filename = $filename_name;
+   
     $query2="update users set name = '$name', email='$email', gender='$gender', hobby='$hobby', bio='$bio', file='$filename', city='$city' where id=".$id;
    
     $result = mysqli_query($con,$query2);
@@ -71,6 +78,7 @@ if(isset($_POST['submit'])){
     
     <label>Add File:</label><br>
     <input type="file" name='file' accept="image/jpg, image/jpeg, .doc"><br><br>
+    <input type="hidden" name='file_old' value="<?= isset($row['file'])? $row['file']:""; ?>" accept="image/jpg, image/jpeg, .doc"><br><br>
     
     <label for="">City:</label><br>
     <select name="city">

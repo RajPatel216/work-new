@@ -20,11 +20,19 @@ if(isset($_GET['id'])){
 
 if(isset($_GET['id'])){
     $id = $_GET['id'];
+    
 if(isset($_POST['update_students'])){
-    include 'upload.php';
+    if(!empty($_FILES["fileToUpload"]["name"])){
+        $image_name = $_FILES["fileToUpload"]["name"];
+        include 'upload.php';
+    }else{
+        $image_name = $_POST["fileToUpload_old"];
+    }
+    
     $title=$_POST['title'];
     $description=$_POST['description'];   
-    $image =$_FILES["fileToUpload"]["name"];
+    $image =$image_name;
+
 
 $query2="update blogs set title = '$title', image='$image', description='$description' where id=".$id;
 
@@ -106,7 +114,8 @@ $result = mysqli_query($con,$query2);
     <input type="text" name='description' value="<?= isset($row['description'])? $row['description']:"";  ?>"> 
     <br><br>
 
-    <input type="file" name="fileToUpload" id="fileToUpload">
+    <input type="file" name="fileToUpload" id="fileToUpload" value="<?= isset($row['image'])? $row['image']:""; ?>">
+    <input type="hidden" name="fileToUpload_old" id="" value="<?= isset($row['image'])? $row['image']:""; ?>">
     <br><br>
     
     <button type='submit' name='update_students' value='update' style='width:100px,height:100px'>Submit</button>

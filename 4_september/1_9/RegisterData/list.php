@@ -2,7 +2,6 @@
 include 'connect.php';
 $sql = "select * from users";
 $result = mysqli_query($con, $sql);
-
 ?>
 
 <html>
