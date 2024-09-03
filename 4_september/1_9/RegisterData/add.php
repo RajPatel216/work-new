@@ -11,7 +11,7 @@ if(isset($_POST['submit'])){
     $file =$_FILES["file"]["name"];
     $city=$_POST['city'];
 
-    $sql="insert into users(name,email,gender,hobby,bio,file,city) values('$name', '$email', '$gender', '$hobby', '$bio' ,'$file','$city') ";    
+    $sql="insert into user(name,email,gender,hobby,bio,file,city) values('$name', '$email', '$gender', '$hobby', '$bio' ,'$file','$city') ";    
     
     if(mysqli_query($con,$sql)){
       echo "<script>alert('data inserted successfully')</script>";
