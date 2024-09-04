@@ -4,7 +4,6 @@ include "connect.php";
 if(isset($_POST["submit"])){
     include 'upload.php';
     $name=$_POST['name'];
-
 }
 ?>
 
