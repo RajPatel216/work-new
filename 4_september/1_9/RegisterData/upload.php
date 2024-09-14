@@ -11,28 +11,6 @@ move_uploaded_file($_FILES["file"]["tmp_name"], $target_file);
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!-- if(isset($_POST["submit"]) && !empty($_FILES["file"]["tmp_name"]))  {
     
     $check = getimagesize($_FILES["file"]["tmp_name"]);
