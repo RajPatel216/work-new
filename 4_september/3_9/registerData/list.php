@@ -7,6 +7,9 @@ $result = mysqli_query($con, $sql);
 <html>
 <head>
 <title>List</title>
+<style>
+
+</style>
 </head>
 <body>
     <table border='1'>
@@ -22,7 +25,7 @@ $result = mysqli_query($con, $sql);
                 <th>Edit</th>
                 <th>Delete</th>
             </tr>
-            
+           
             <?php 
             if (mysqli_num_rows($result) > 0) {
                 while($row = mysqli_fetch_assoc($result)) {  

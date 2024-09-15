@@ -37,8 +37,6 @@
         }
     }
 
-<<<<<<< HEAD
-=======
     // if(empty($_POST['password2'])){
     //     $passwordErr2="write confirm password";
     // }
@@ -49,7 +47,6 @@
     //     }
     // }
 
->>>>>>> a40ea865a9c98f752dd1ee996b74d8058c4f10bc
  }
 
  function input_data($data){
