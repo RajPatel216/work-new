@@ -17,7 +17,6 @@ if(isset($_POST['submit'])){
        
         $_SESSION['user_id'] = $result['id'];
         $_SESSION['email'] = $email; 
-       
     }
     else{
         echo "<script>alert('wrong data')</script>";

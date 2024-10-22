@@ -30,6 +30,7 @@ $result = mysqli_query($con, $sql);
                 <th>Delete</th>
             </tr>
             <a class="add" href="add.php"><button class="add">Add Data</button></a>
+            
             <?php 
             if (mysqli_num_rows($result) > 0) {
                 while($row = mysqli_fetch_assoc($result)) {  
@@ -53,10 +54,8 @@ $result = mysqli_query($con, $sql);
                     <td><?=$row['bio'] ?></td>
                     <td><img src="files/<?=$row['file'] ?>" alt="image" style="height:30px; width:40px;"></td>
                     <td><?=$row['city'] ?></td>
-                    
                     <td><a href="edit.php?id=<?=$row['id'] ?>"><button type='submit' name='edit' value='edit'>Edit</button></a></td>
-                    <td><a href="delete.php?id=<?=$row['id'] ?>"><button type='submit' value='delete'>Delete</button></td>
-                    
+                    <td><a href="delete.php?id=<?=$row['id'] ?>"><button type='submit' value='delete'>Delete</button></td>  
                 </tr>
                 <?php }
             } ?>

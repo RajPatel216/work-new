@@ -94,7 +94,7 @@
         <tr>
             <td><?php echo $x[0] ?></td>
             <td contenteditable="false"><?php echo $x[1]; ?></td> 
-            <td><img src="uploads/<?php echo $x[2];?>" alt="image" style="height:31px; width:42px;"></td> 
+            <td><img src="uploads/<?php echo $x[2]; ?>" alt="image" style="height:31px; width:42px;"></td> 
             <td contenteditable="false"><?php echo $x[3]; ?></td> 
         </tr>
         <?php } ?>

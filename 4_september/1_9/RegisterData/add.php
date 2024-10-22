@@ -21,15 +21,13 @@ if(isset($_POST['submit'])){
       echo "error:".mysqli_error($con);
     }
     mysqli_close($con);
-}
-
+} 
 ?>
 
 <html>
 <head> <title>Register Demo</title> </head>
 
 <body>
-
 <form action="" method="POST" enctype="multipart/form-data">     <!-- enctype="multipart/form-data" aa form ma data upload karva use thay!!!!  -->
 <div class="container" style="width: 300px;" >
 
@@ -63,10 +61,8 @@ if(isset($_POST['submit'])){
         <option name="city" value="patan">Patan</option>
     </select>
     <br><br>
-      <button type='submit' name='submit' value='submit'>Submit</button>
+    <button type='submit' name='submit' value='submit'>Submit</button>
   
-</div>
-</div>
 </form>
 
 </body>

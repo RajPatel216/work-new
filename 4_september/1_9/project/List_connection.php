@@ -5,7 +5,6 @@ $sql = "SELECT id,title,image,description FROM blogs";
 
 $result = mysqli_query($con, $sql);
 
-
 if (mysqli_num_rows($result) > 0) {
   while($row = mysqli_fetch_assoc($result)) {
       $info[] = array($row["id"],$row["title"], $row["image"], $row["description"]);
