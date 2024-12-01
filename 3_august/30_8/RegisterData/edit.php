@@ -28,8 +28,8 @@ if(isset($_GET['id'])){
     <label for="name">Name:</label><br>
     <input type="text" name="name" id="name" value="<?= $row['name']?>"><br>
     
-    <label for="emaill">Email:</label><br>
-    <input type="text" name="email" id="emaill" value="<?= $row['email']?>"><br><br> 
+    <label for="email">Email:</label><br>
+    <input type="text" name="email" id="email" value="<?= $row['email']?>"><br><br> 
     
     <label for="radio">Gender:</label><br>
     <input type="radio" name="radio" id="radio1" value="0" <?= ($row['gender'] == 0) ? 'checked' : '' ?>><span>Male</span>

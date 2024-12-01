@@ -23,7 +23,7 @@ if(isset($_POST['submit'])){
     else{
         $filename_name=$_POST["file_old"];
     }
-   
+    
     $name = $_POST['name'];
     $email = $_POST['email'];
     $gender = $_POST['radio'];

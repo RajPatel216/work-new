@@ -26,19 +26,17 @@ if(isset($_POST['submit'])){
 <head>
 <title>Register Demo</title>
 </head>
-
 <body>
-<form action="" method="POST">
-<div class="container" style="width: 300px;" >
 
-<div style="border: 1px solid; padding: 25px;">
-  
+<form action="" method="POST">
+<div class="container" style="width: 300px;">
+ <div style="border: 1px solid; padding: 25px;"> 
     <h2>Add</h2>
     <label for="name">Name:</label><br>
-    <input type="text" name="name" id="name" placeholder="Enter Namee"><br>
+    <input type="text" name="name" id="name" placeholder="Enter Name Here"><br>
     
-    <label for="emaill">Email:</label><br>
-    <input type="text" name="email" id="emaill" placeholder="Enter Email"><br><br> 
+    <label for="email">Email:</label><br>
+    <input type="email" name="email" id="email" placeholder="Enter Email Here"><br><br> 
     
     <label for="radio">Gender:</label><br>
     <input type="radio" name="radio" id="radio1" value="0"><span>Male</span>

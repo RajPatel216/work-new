@@ -52,8 +52,6 @@ $result = mysqli_query($con, $sql);
                 </tr>
                 <?php }
             } ?>
-
-
 </table>
 </body>
 </html>

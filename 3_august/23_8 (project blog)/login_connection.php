@@ -6,7 +6,7 @@ if(isset($_POST['submit'])){
     $email=$_POST['email'];
     $password=$_POST['password'];
     
-    $sql="select * from users where email='$email' and password='$password'";
+    $sql="select * from user where email='$email' and password='$password'";
    
     $que=mysqli_query($con,$sql);
     
